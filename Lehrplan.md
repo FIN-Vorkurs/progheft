@@ -6,7 +6,7 @@
 
 ## Java
 *Hello World
-*sequentielle Ausführung mehrerer Befehle
+*sequentielle Ausführung mehrerer Befehle / Ein und Ausgabe von Strings
 *Variablen und Datentypen
 *Verzweigung:
 ** if
