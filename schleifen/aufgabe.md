@@ -1,10 +1,6 @@
 ## Schleifen
 
-Barth Simpson soll 100 mal an die Tafel schreiben:
-"Ich muss für so etwas Schleifen benutzen."
-* Schreibe ein Javaprogramm, das die gleiche Ausgabe hat
-
-
+* Barth Simpson soll 100 mal an die Tafel schreiben:  "Ich muss für so etwas Schleifen benutzen." Schreibe ein Javaprogramm, das die gleiche Ausgabe hat
 * Schreibe ein Programm, dass die ASCII-Tabelle ausgibt (also Nummer-Buchstabe)
 * Was ist falsch am Programm "Schleife.java", finde und korrigire die Fehler
 
