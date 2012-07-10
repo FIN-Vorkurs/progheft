@@ -4,7 +4,7 @@
 * Umgang mit der Shell, Befehlsstrukter (Befehle verknüpfen)
 * Erklärung der in Unix üblichen Verzeichnissstruktur
 
-*Vorgegebene Ordner mit wget herunterladen und mit tar -xf entpacken
+* Vorgegebene Ordner mit wget herunterladen und mit tar -xf entpacken
 
 ## Java
 * Hello World
