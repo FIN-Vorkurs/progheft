@@ -4,6 +4,8 @@
 *Umgang mit der Shell, Befehlsstrukter (Befehle verknüpfen)
 *Erklärung der in Unix üblichen Verzeichnissstruktur
 
+*Vorgegebene Ordner mit wget herunterladen und mit tar -xf entpacken
+
 ## Java
 *Hello World
 *sequentielle Ausführung mehrerer Befehle / Ein und Ausgabe von Strings
@@ -18,4 +20,3 @@
 * 'Auslagern' von Code in Funktionen
 * Guter Programmierstil
 * Debugging
-
