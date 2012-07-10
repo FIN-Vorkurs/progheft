@@ -10,4 +10,8 @@
 
 Du hast eben dein erstes Javaprogramm geschrieben. Um es auszuführen, musst du zuerst den Compiler und danach die Java-VM aufrufen.
 * compiliere dein Programm mit dem Befehl 'javac Hello.java'
-* wenn keine Compilerfehler mehr auftreten, führe dein Programm aus, indem du 'java Hello' aufrufst.
+* wenn keine Compilerfehler mehr auftreten, führe dein Programm aus, indem du 'java Hello' aufrufst
+
+* Öffne Eclipse und kopiere deinen Quelltext in ein neu angelegtes Projekt
+Eclipse ist eine Entwicklungsumgebung die weit mehr kann als ein einfacher Texteditor wie 'gedit'.
+Die Aufrufe von Javacompiler und JVM versteckt Eclipse hinter einem großen Play-Button.

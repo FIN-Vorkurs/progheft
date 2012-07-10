@@ -1,4 +1,6 @@
-* sieh nach wie spät es ist
+## Aufgabenblatt Unix
+
+* sieh nach wie spät es ist mit 'date' und rufe mit 'man date' die Manpage zu 'date' an
 * lege in Europa einen Ordner 'Großbritanien' an und verschiebe 'york' hinein
 * finde Atlantis und lösche es
 * lege einen weiteren Ordner mit Städten für Australien an, lösche den Ordner wieder
