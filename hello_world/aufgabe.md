@@ -8,6 +8,6 @@ public class Hello {
 	}
 }
 
-Du hast eben dein Erstes Javaprogramm geschrieben. Um es auszuführen, musst du zuerst den Compiler und danach die Java-VM aufrufen.
+Du hast eben dein erstes Javaprogramm geschrieben. Um es auszuführen, musst du zuerst den Compiler und danach die Java-VM aufrufen.
 * compiliere dein Programm mit dem Befehl 'javac Hello.java'
 * wenn keine Compilerfehler mehr auftreten, führe dein Programm aus, indem du 'java Hello' aufrufst.
