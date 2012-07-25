@@ -30,4 +30,43 @@ Die Verzeichnisse im Wurzelverzeichnis sind bei den meisten Betriebssystemen (fa
 * var - ?
 
 ## Arbeiten im Textmodus
-Unix stammt aus Zeiten, in denen man einen Rechner mit mehreren 'Terminals' bedient hat. Ist man an so einem Terminal angemeldet, sieht man erstmal die Ausgabe des sog. 'Command Line Interpreters' – /bin/sh. Dieses Programm ist im wesentlichen dafür zuständig, andere Programme aufzurufen. Hinter dem Kommando 'ls' versteckt sich zum Beispiel ein Aufruf des Programms /bin/ls. Außerdem gibt es noch einige zusätzliche Kommandos, zum Beispiel 'help'.
+Unix stammt aus Zeiten, in denen man einen Rechner mit mehreren 'Terminals' bedient hat. Ist man an so einem Terminal angemeldet, sieht man erstmal die Ausgabe des sog. 'Command Line Interpreters' – /bin/sh. Dieses Programm ist im wesentlichen dafür zuständig, andere Programme aufzurufen. Hinter dem Kommando 'ls' versteckt sich zum Beispiel ein Aufruf des Programms /bin/ls. Außerdem gibt es noch einige zusätzliche Kommandos, wie 'help'. Das wichtigste Kommando in Unix ist 'man'. Mit 'man' lassen sich die sogenannten Manpages zu einem Programm anzeigen. In der Manpage stehen alle wichtigen Informationen, die man zu einem Programm braucht.
+'man man' gibt zum Beispiel eine Hilfeseite zur Benutzung der Manpages aus.
+
+### Wichtige Befehle
+* cat - gibt den Inhalt einer Datei aus
+* cd - Verzeichnis wechseln
+* cp - kopiert eine Datei
+* date - zeigt das aktuelle Datum und die Uhrzeit an
+* echo - gibt die Eingabe zurück
+* exit - aktuelle Terminalsession beenden
+* gedit - ruft einen Texteditor auf
+* grep - Durchsuchen einer Datei
+* javac - Javacompiler aufrufen
+* java - ein Javaprogramm ausführen
+* ls - zeigt den Inhalt des aktuellen Verzeichnisses
+* man - zeigt eine Hilfeseite an
+* mkdir - legt ein Verzeichnis an
+* mv - verschiebt eine Datei
+* passwd - eigenes Passwort ändern
+* pwd - Zeigt das Verzeichnis an
+* rm - Datei löschen
+* tar - Dateiarchive packen und entpacken
+* wget - herunterladen einer Datei
+* yes - wiederholt die Eingabe
+
+### Befehlssyntax
+Um einen Befehl richtig ausführen zu können benötigt dieser eine bestimmte Form. Ein typischer Unixbefehl könnte so aussehen:
+'ls -lBh ~/'. ls ist der ausgeführte Befehl, -l, -B und -h sind Parameter für das Programm ls und '~/' der Pfad zum Verzeichnis, dessen Datein ls auflisten soll. '~' ist eine abgekürzte Schreibweise für das eigene home-Verzeichnis.i
+Genau so werden die Parameter und der richtige Aufruf von ls auch in der Manpage beschrieben. Mehrere Parameter können oftmals auch zusammengefasst werden, so dass 'ls -l -a ...' die selbe Bedeutung hat wie 'ls -la ..'
+
+### Befehle verknüpfen
+In Unix können auch mehrere Befehle verknüpft werden. Dazu gibt es mehrere nützliche Operatoren.
+* & - 'command &' führt das Kommando im Hintergrund aus
+* && - mit 'command1 && command2' kann man mehrere Kommandos hintereinander ausführen z.B. 'mkdir foo && ls -l && cd foo/'
+* | - mit 'command1 | command2' kann man die Ausgabe von Kommando1 in Kommando2 verwenden  z.B. 'ls -l | grep foo'
+
+Man kann mit diesen Verknüpfungen aber auch sehr viel Schabernack treiben, man sollte davon nicht mehr benutzen als man benötigt.
+Weitere nützliche Operatoren sind:
+* > - 'command > file' schreibt die Ausgabe der Befehls in die angegebene Datei
+* >> - wie '>', hängt die Ausgabe hinten an die Datei an
