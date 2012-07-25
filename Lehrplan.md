@@ -1,7 +1,7 @@
 #Lehrplan fürs Vorkursheft
 Wir haben nur 8 Unterrichtsstunden, davon sind nur 4 in Rechnerpools. Wir müssen also unbedingt darauf achten, dass wir die Praxisaufgaben kurz und knapp halten und genug Theorieaufgaben für 4 Stunden bereitstellen.
 
-## Unix
+## Unix	[Basti]
 * Umgang mit der Shell, Befehlsstrukter (Befehle verknüpfen)
 * Erklärung der in Unix üblichen Verzeichnissstruktur
 

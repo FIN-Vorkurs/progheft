@@ -1,12 +1,12 @@
-#Unixoide
+# Unixoide
 
-##Wozu sollte man lernen, wie man UNIX – ein veraltetes Betriebssystem - benutzt?
+## Wozu sollte man lernen, wie man UNIX – ein veraltetes Betriebssystem - benutzt?
 Viele der Grundprinzipien von UNIX sind in heutigen Betriebssystem noch vorhanden und mit einigen dieser Betriebssysteme werdet ihr im laufe eures Studiums noch zu tun haben. Doch was genau sind diese Grundprinzipien die sich in anderen Betriebssystemen wiederfinden lassen?
-*'everything is a file'
-*Verzeichnisstruktur
-*Arbeiten im Textmodus
-*Ressourcenmanagement
-*Nutzerverwaltung
+* 'everything is a file'
+* Verzeichnisstruktur
+* Arbeiten im Textmodus
+* Ressourcenmanagement
+* Nutzerverwaltung
 * ...
 
 ## Verzeichnisstruktur
