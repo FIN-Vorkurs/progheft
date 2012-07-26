@@ -54,6 +54,7 @@ Unix stammt aus Zeiten, in denen man einen Rechner mit mehreren 'Terminals' bedi
 * passwd - eigenes Passwort ändern
 * pwd - Zeigt das Verzeichnis an
 * rm - Datei löschen
+* ssh - eine Shell auf einem anderen Rechner öffnen
 * tar - Dateiarchive packen und entpacken
 * wget - herunterladen einer Datei
 * yes - wiederholt die Eingabe
@@ -69,7 +70,13 @@ In Unix können auch mehrere Befehle verknüpft werden. Dazu gibt es mehrere nü
 * && - mit 'command1 && command2' kann man mehrere Kommandos hintereinander ausführen z.B. 'mkdir foo && ls -l && cd foo/'
 * | - mit 'command1 | command2' kann man die Ausgabe von Kommando1 in Kommando2 verwenden  z.B. 'ls -l | grep foo'
 
-Man kann mit diesen Verknüpfungen aber auch sehr viel Schabernack treiben, man sollte davon nicht mehr benutzen als man benötigt.
+Man kann mit diesen Verknüpfungen aber auch sehr viel Schabernack treiben, man sollte davon nicht mehr benutzen als man benötigt, da man so unnötige Fehler vermeiden kann.
 Weitere nützliche Operatoren sind:
 * > - 'command > file' schreibt die Ausgabe der Befehls in die angegebene Datei
 * >> - wie '>', hängt die Ausgabe hinten an die Datei an
+
+### Vom Textmodus zum Graphikmodus und wieder zurück
+Wie man leicht sieht, besitzen moderne Unixoide Betriebssysteme nicht mehr ausschließlich den Textmodus, man kann auch wie gewohnt in Fenstern bunte Bildchen anschauen.
+Im Gegensatz zu Windows, kann man hier allerdings Programme nicht wirklich von der Shell losgelöst starten – die Ein- und Ausgaben sind nur für den User nicht mehr sichtbar. Besonders deutlich wird wenn man zum Beispiel 'firefox' über ein Terminal startet – ob Webbrowser, Spiel oder Programmierumgebung – jedes Programm hängt an der Shell.
+Die Wichtigkeit der Shell und für viele Entwickler der Grund überhaupt eine Shell zu benutzen heißt Secure Shell. Mit dem Befehl 'ssh' kann man nämlich auch eine Shell auf einem anderen Unix-Rechner öffnen und sich Beispielsweise von Zuhause im Rechnerpool der FIN einloggen und dort arbeiten – sogar mit Programmen die man lokal gar nicht installiert hat. Mit 'ssh -x' kann man sogar Graphikmodus-Programme benutzen.
+Im Gegensatz zum Remotedesktop werden hier allerdings wesentlich weniger Daten übertragen und der Computer bleibt (einigermaßen) schnell.
