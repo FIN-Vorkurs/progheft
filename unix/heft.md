@@ -15,19 +15,22 @@ An dieser Stelle lernen wir die ersten beiden Kommandos für das Terminal kennen
 Da in Unix alles eine Datei ist, sieht man auch die Unterverzeichnisse des aktuellen Verzeichnisses.
 Die Verzeichnisse im Wurzelverzeichnis sind bei den meisten Betriebssystemen (fast) gleich und jedes dieser Verzeichnisse erfüllt die selbe Bedeutung.
 
-* bin – Ausführbare Programme, z.B. die Shell /bin/sh 
-* boot - der Betriebssystemkern und was zum hochfahren benötigt wird
-* dev - 'Devices' zum Beispiel Festplatten, USB-Geräte, der Zufallszahlengenerator ...
-* etc - Konfigurations dateien für das Betriebssystem 
-* home - Das Elternverzeichnis aller Nutzerverzeichnisse
-* lib - Bibliotheken für andere Programme
-* opt - manuell installierte Programme
-* proc - Systemressourcen
-* root - Das Heimatverzeichnis des 'root'-Nutzers
-* sbin - das 'bin' für Programme die nur root ausführen darf
-* tmp - Temporäre Dateien
-* usr - 'unix system resources' Datein die für alle Nutzer relevant sind
-* var - ?
+* / - das Wurzelverzeichnis
+* /bin – Ausführbare Programme, z.B. die Shell /bin/sh 
+* /boot - der Betriebssystemkern und was zum hochfahren benötigt wird
+* /dev - 'Devices' zum Beispiel Festplatten, USB-Geräte, der Zufallszahlengenerator ...
+* /etc - Konfigurations dateien für das Betriebssystem 
+* /home - Das Elternverzeichnis aller Nutzerverzeichnisse
+* /lib - Bibliotheken für andere Programme
+* /opt - manuell installierte Programme
+* /proc - Systemressourcen
+* /root - Das Heimatverzeichnis des 'root'-Nutzers
+* /sbin - das 'bin' für Programme die nur root ausführen darf
+* /tmp - Temporäre Dateien
+* /usr - 'unix system resources' Datein die für alle Nutzer relevant sind
+* /var - ?
+
+Außerdem gibt es noch Kurzschreibweisen für bestimmte Verzeichnisse. '.' beszeichnet das aktuelle Verzeichnis, '..' das Elternverzeichnis und '~' das eigene Homeverzeichnis.
 
 ## Arbeiten im Textmodus
 Unix stammt aus Zeiten, in denen man einen Rechner mit mehreren 'Terminals' bedient hat. Ist man an so einem Terminal angemeldet, sieht man erstmal die Ausgabe des sog. 'Command Line Interpreters' – /bin/sh. Dieses Programm ist im wesentlichen dafür zuständig, andere Programme aufzurufen. Hinter dem Kommando 'ls' versteckt sich zum Beispiel ein Aufruf des Programms /bin/ls. Außerdem gibt es noch einige zusätzliche Kommandos, wie 'help'. Das wichtigste Kommando in Unix ist 'man'. Mit 'man' lassen sich die sogenannten Manpages zu einem Programm anzeigen. In der Manpage stehen alle wichtigen Informationen, die man zu einem Programm braucht.
