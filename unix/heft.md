@@ -1,6 +1,6 @@
 # Unixoide
 
-## Wozu sollte man lernen, wie man UNIX – ein veraltetes Betriebssystem - benutzt?
+## Wozu sollte man lernen, wie man UNIX benutzt?
 Viele der Grundprinzipien von UNIX sind in heutigen Betriebssystem noch vorhanden und mit einigen dieser Betriebssysteme werdet ihr im laufe eures Studiums noch zu tun haben. Doch was genau sind diese Grundprinzipien die sich in anderen Betriebssystemen wiederfinden lassen?
 * 'everything is a file'
 * Verzeichnisstruktur
@@ -28,9 +28,10 @@ Die Verzeichnisse im Wurzelverzeichnis sind bei den meisten Betriebssystemen (fa
 * /sbin - das 'bin' für Programme die nur root ausführen darf
 * /tmp - Temporäre Dateien
 * /usr - 'unix system resources' Datein die für alle Nutzer relevant sind
-* /var - ?
+* /var - Variabel
 
 Außerdem gibt es noch Kurzschreibweisen für bestimmte Verzeichnisse. '.' beszeichnet das aktuelle Verzeichnis, '..' das Elternverzeichnis und '~' das eigene Homeverzeichnis.
+Verzeichnisse die mit '.' beginnen sind versteckt. Man kann sie anzeigen, wenn man ls mit dem Parameter '-a' benutzt.
 
 ## Arbeiten im Textmodus
 Unix stammt aus Zeiten, in denen man einen Rechner mit mehreren 'Terminals' bedient hat. Ist man an so einem Terminal angemeldet, sieht man erstmal die Ausgabe des sog. 'Command Line Interpreters' – /bin/sh. Dieses Programm ist im wesentlichen dafür zuständig, andere Programme aufzurufen. Hinter dem Kommando 'ls' versteckt sich zum Beispiel ein Aufruf des Programms /bin/ls. Außerdem gibt es noch einige zusätzliche Kommandos, wie 'help'. Das wichtigste Kommando in Unix ist 'man'. Mit 'man' lassen sich die sogenannten Manpages zu einem Programm anzeigen. In der Manpage stehen alle wichtigen Informationen, die man zu einem Programm braucht.
