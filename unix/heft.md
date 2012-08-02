@@ -77,7 +77,7 @@ Weitere nützliche Operatoren sind:
 * >> - wie '>', hängt die Ausgabe hinten an die Datei an
 
 ### Vom Textmodus zum Graphikmodus und wieder zurück
-Wie man leicht sieht, besitzen moderne Unixoide Betriebssysteme nicht mehr ausschließlich den Textmodus, man kann auch wie gewohnt in Fenstern bunte Bildchen anschauen.
+Wie man zum Beispiel in den Rechnerpools der Fakultät sieht, besitzen moderne Unixoide Betriebssysteme nicht mehr ausschließlich den Textmodus. Man kann auch wie gewohnt in Fenstern bunte Bildchen anschauen.
 Im Gegensatz zu Windows, kann man hier allerdings Programme nicht wirklich von der Shell losgelöst starten – die Ein- und Ausgaben sind nur für den User nicht mehr sichtbar. Besonders deutlich wird wenn man zum Beispiel 'firefox' über ein Terminal startet – ob Webbrowser, Spiel oder Programmierumgebung – jedes Programm hängt an der Shell.
 Die Wichtigkeit der Shell und für viele Entwickler der Grund überhaupt eine Shell zu benutzen heißt Secure Shell. Mit dem Befehl 'ssh' kann man nämlich auch eine Shell auf einem anderen Unix-Rechner öffnen und sich Beispielsweise von Zuhause im Rechnerpool der FIN einloggen und dort arbeiten – sogar mit Programmen die man lokal gar nicht installiert hat. Mit 'ssh -x' kann man sogar Graphikmodus-Programme benutzen.
 Im Gegensatz zum Remotedesktop werden hier allerdings wesentlich weniger Daten übertragen und der Computer bleibt (einigermaßen) schnell.
