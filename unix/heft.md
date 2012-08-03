@@ -19,7 +19,7 @@ Die Verzeichnisse im Wurzelverzeichnis sind bei den meisten Betriebssystemen (fa
 * /bin – Ausführbare Programme, z.B. die Shell /bin/sh 
 * /boot - der Betriebssystemkern und was zum hochfahren benötigt wird
 * /dev - 'Devices' zum Beispiel Festplatten, USB-Geräte, der Zufallszahlengenerator ...
-* /etc - Konfigurations dateien für das Betriebssystem 
+* /etc - Konfigurationsdateien für das Betriebssystem 
 * /home - Das Elternverzeichnis aller Nutzerverzeichnisse
 * /lib - Bibliotheken für andere Programme
 * /opt - manuell installierte Programme
