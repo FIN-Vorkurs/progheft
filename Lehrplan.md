@@ -8,11 +8,11 @@ Wir haben nur 8 Unterrichtsstunden, davon sind nur 4 in Rechnerpools. Wir müsse
 * Vorgegebene Ordner mit wget herunterladen und mit tar -xf entpacken
 
 ## Java
-* "Ein Rechner ist dumm", wir muessen ihm sagen was er tun muss
-* Hello World
-* sequentielle Ausführung mehrerer Befehle / Ein und Ausgabe von Strings
-* Variablen und Datentypen
-* Verzweigung:
+* "Ein Rechner ist dumm", wir muessen ihm sagen was er tun muss (Kai)
+* Hello World (Basti)
+* sequentielle Ausführung mehrerer Befehle / Ein und Ausgabe von Strings (Basti)
+* Variablen und Datentypen (Basti)
+* Verzweigung: (Kai)
 ** if
 ** then
 ** else
