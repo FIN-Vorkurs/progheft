@@ -21,5 +21,6 @@ Wir haben nur 8 Unterrichtsstunden, davon sind nur 4 in Rechnerpools. Wir müsse
 * Schleifen und Arrays (Kai) (1 Tag)
 * von der Idee zum Programm (Kai) (1/2 Tag)
 * 'Auslagern' von Code in Funktionen (Kai) (1/2 Tag)
+** Rekursion als Exkursion
 * Guter Programmierstil (Kai) (1/2 Tag)
 * Debugging (Kai) (1 Tag)
