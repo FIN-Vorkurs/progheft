@@ -16,8 +16,8 @@ Wir haben nur 8 Unterrichtsstunden, davon sind nur 4 in Rechnerpools. Wir müsse
 ** then
 ** else
 ** (switch case)
-* Schleifen und Arrays
-* von der Idee zum Programm
-* 'Auslagern' von Code in Funktionen
-* Guter Programmierstil
-* Debugging
+* Schleifen und Arrays (Kai)
+* von der Idee zum Programm (Kai)
+* 'Auslagern' von Code in Funktionen (Kai)
+* Guter Programmierstil (Kai)
+* Debugging (Kai)
