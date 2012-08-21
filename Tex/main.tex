@@ -1,0 +1,56 @@
+\documentclass[fontsize=9pt,paper=a5,fleqn,%parskip=full-,
+DIV15,BCOR5.0mm,smallheadings,final, openany]{scrbook}
+\usepackage{scrpage2}
+\usepackage[OT1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage{ngerman} 
+\usepackage[ngerman]{babel}
+%\usepackage{umlaute}
+\usepackage{amsmath,amssymb}
+
+%\usepackage{color}
+\usepackage[final]{graphicx}
+%\usepackage{url}
+\usepackage{multicol}
+\usepackage{polynom}
+\usepackage{vorkurs}
+\usepackage[breaklinks=true,pdftex,final,]{hyperref}
+%\usepackage{url}
+\usepackage{microtype}
+%Programmierung
+\usepackage{listings}
+
+%\usepackage[Bjornstrup]{fncychap}
+\setcounter{tocdepth}{0} % Nur Kapitel im Inhaltsverzeichnis anzeigen
+\renewcommand*{\chapterheadstartvskip}{\vspace{0pt}} % Kein Leerraum ueber Ueberschrift
+\setlength\mathindent{1pc} % Einzug von Mathe-Bloecken
+\setcapindent{1em} % Einzug der zweiten Zeile in Unterschrift aendern
+\automark[chapter]{chapter} % Kapitelname in Kopfzeile links und rechts 
+
+%\includeonly{funktionen,trig,log_e}
+
+\begin{document}
+
+\title{Vorkurs Mathematik}
+\author{Sebastian Mai \\ Kai Dannies
+%FaRaFIN Vorkurs-Team
+}
+\publishers{\begin{center} \hspace*{1cm}\includegraphics%[viewport = 60 700 660 790]
+{./images/farafin_logo_schwarz_auf_weiss.png}\end{center}}
+\lowertitleback{Dieses Heft wurde vom Fachschaftsrat der Fakultät für
+Informatik der Otto-von-Guericke-Universität Magdeburg für den
+Mathematik-Vorkurs 2011 produziert.}
+\date{2011}
+\maketitle
+\tableofcontents
+
+\cleardoublepage
+%\pagestyle{scrplain}
+\ofoot[]{}
+\markboth{Notizen}{Notizen}
+%\mbox{}
+%\cleardoublepage
+%\include{Funktionen}
+%\include{ZusammenfassungKay}
+%\include{merkblatt}
+\end{document}
