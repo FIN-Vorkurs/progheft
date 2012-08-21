@@ -1,5 +1,6 @@
 #Lehrplan fürs Vorkursheft
 Wir haben nur 8 Unterrichtsstunden, davon sind nur 4 in Rechnerpools. Wir müssen also unbedingt darauf achten, dass wir die Praxisaufgaben kurz und knapp halten und genug Theorieaufgaben für 4 Stunden bereitstellen.
+Das Heft sollte nicht mehr als 100 Seiten haben, sonst wird die Bindung teurer.
 
 ## Unix	[Basti] 
 * (1 Tag)
