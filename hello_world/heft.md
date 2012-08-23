@@ -1,9 +1,14 @@
 # Hello World!
 
 ## Wozu "Hello World!"?
-Fast alle Bücher, Tutorials, Vorkurshefte und sonstige Programmierbeispiele beginnen mit einem einfachen Programm, das nichts tut als "Hello World!" auf der Konsole auszugeben.
-In den meisten Programmiersprachen gibt es eine Art "Rahmen" der die eigentliche Programmlogik umgibt.
 
+Fast alle Bücher, Tutorials, Vorkurshefte und sonstige Programmierbeispiele beginnen mit einem einfachen Programm, das nichts tut als "Hello World!" auf der Konsole auszugeben.
+
+Im Grund behandelt man mit dem "Hello World!"-Programm zwei Fragen: 
+* Was und an welchen Stellen kann ich im Quelltext ändern, um ein tolleres Programm zu erhalten?
+* Wie komme ich von der Quelltext-Datei zum laufenden Programm?
+
+In den meisten Programmiersprachen gibt es eine Art "Rahmen" der die eigentliche Programmlogik umgibt.
 In Java sieht das Hello-World-Programm wie folgt aus: 
 <pre> <code>public class Hello {
 	public static void main(String args[]) {
