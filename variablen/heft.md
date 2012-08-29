@@ -28,6 +28,7 @@ Jetzt kennt der Compiler den Typ der Variablen. Damit man auch etwas mit Variabl
 Eine Zuweisung sieht so aus: "variablenname = Wert;".
 Wichtig ist dabei vor allem eins: Das "=" also der Zuweisungsoperator hat eine (Lese-)Richtung. Der Wert den die Variable bekommt steht immer rechts!
 Man kann in einer Zuweisung auch den (alten) Wert der Variable oder den einer anderen Variablen verwenden: "p = 2 * p + q;".
+
 Außerdem gibt es noch zwei Kurzschriebweisen, die oft verwendet werden:
 "x += y;" entspricht "x = x + y;" (das funktioniert auch mit "*", "/", "%", "-")
 "x++;" enstpricht "x = x + 1;" (genauso funktioniert --)
