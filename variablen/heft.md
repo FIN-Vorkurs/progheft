@@ -9,12 +9,13 @@ Ersetzen wir im "Hello World"-Programm die Zeile
 durch
 <pre> <code>String text;
 text = "Hello World"; // weist der Variable text den Wert "Hello World" zu.
-System.out.println(text); // gibt den Wert der Variablen text aus. </pre> <code>
+System.out.println(text); // gibt den Wert der Variablen text aus. </pre> </code>
 Erhalten wir ein Programm, dass das selbe tut wie das ursprüngliche "Hello World"-Proramm.
 Dieses Programm ist allerding besser als das alte, denn die Ausgabe ist jetzt von der Eingabe (im Quelltext) getrennt.
 
 ##Deklaration und Definition
 Um mit Variablen arbeiten zu können braucht man zwei Schritte: Deklaration und Definition.
+
 "Sei p eine Primzahl" entspricht in etwa dem, was man bei der Deklaration einer Variable tut. Um Werte digital abspeichern zu können muss man Wissen, um was für Daten es sich Handelt. Eine Zahl muss anders abgespeichtert werden, als zum Beispiel eine Zeichenkette wie "Hello World".
 Um auszudrücken um was für Daten es sich handelt gibt es sogenannte Datentypen. Eine kleine Auswahl der verfügbaren Typen findest du in der Tabelle.
 
