@@ -12,8 +12,8 @@ Das Heft sollte nicht mehr als 100 Seiten haben, sonst wird die Bindung teurer.
 ## Java
 * "Ein Rechner ist dumm", wir muessen ihm sagen was er tun muss (Kai) (1/2 Tag)
 * Hello World (Basti) (1/2 Tag)
-* Variablen und Datentypen (Basti) (1/2 Tag)
 * sequentielle Ausführung mehrerer Befehle / Ein und Ausgabe von Strings (Basti) (1/2 Tag)
+* Variablen und Datentypen (Basti) (1/2 Tag)
 * Verzweigung: (Kai) (1 Tag)
 ** if
 ** then
