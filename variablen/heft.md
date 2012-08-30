@@ -35,3 +35,9 @@ Außerdem gibt es noch zwei Kurzschriebweisen, die oft verwendet werden:
 
 Definition und Deklaration können auch in einem Schritt gemacht werden: 'String text = "Hello World";'.
 
+# Befehle
+Java ist eine Imperative Programmiersprache – das heißt, ein Javaprogramm besteht aus einer Reihe von Befehlen (manchmal auch Anweisung genannt), die nacheinander abgearbeitet werden.
+Diese Anweisungen können verschieden aussehen, eines haben sie jedoch alle gemeinsam: Sie enden mit einem Semikolon. Das Semikolon dient als trennzeichen zwischen den einzelnen Befehlen.
+<pre> <code>Befehl1; Befehl2; ... ; Befehl42</pre></code>
+
+
