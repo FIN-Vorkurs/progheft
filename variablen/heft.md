@@ -57,4 +57,14 @@ Sollen der Funktion mehrere Werte übergeben werden, so müssen diese durch Komm
 ## Einlesen von Werten
 Um Werte einzulesen braucht man einen Variable vom Typ "Scanner". Weil man damit nicht nur von der Standarteingabe, sondern auch aus Dateien, Netzwerkverbindungen und anderen Quellen Daten einlesen kann, muss man Angeben, dass der Scanner die Daten aus "System.in" beziehen soll.
 Danach kann man mit scannervariable.next() die nächste Eingabe abholen. Im Quelltext könnte das zum Beispiel so aussehen:
-<pre><code>
+<pre><code>import java.io.*;
+import java.util.Scanner;
+
+public class Hello {
+	public static void main(String args[]) {
+		Scanner scanner = new Scanner(System.in);
+		String name = scanner.next();
+		System.out.println("Hello " + name + "!");
+	}
+}</pre></code>
+Damit ist unser "Hello World"-Programm, schon richtig gut, denn es kann nun auf Nutzereingaben reagieren.
