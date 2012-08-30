@@ -55,16 +55,19 @@ Um diese Daten an die Funktion zu übergeben gibt es die Klammern nach dem Funkt
 Sollen der Funktion mehrere Werte übergeben werden, so müssen diese durch Kommata getrennt werden – die Reihenfolge der Parameter entscheidet dabei darüber, welcher Wert wofür benutzt wird.
 
 ## Einlesen von Werten
-Um Werte einzulesen braucht man einen Variable vom Typ "Scanner". Weil man damit nicht nur von der Standarteingabe, sondern auch aus Dateien, Netzwerkverbindungen und anderen Quellen Daten einlesen kann, muss man Angeben, dass der Scanner die Daten aus "System.in" beziehen soll.
+Um Werte einzulesen braucht man einen Variable vom Typ "Scanner". Mit dem Scanner kann man nicht nur von der Standarteingabe, sondern auch aus Dateien, Netzwerkverbindungen und anderen Quellen Daten einlesen. 
+Deswegen muss man Angeben, dass der Scanner die Daten aus "System.in" beziehen soll.
 Danach kann man mit scannervariable.next() die nächste Eingabe abholen. Im Quelltext könnte das zum Beispiel so aussehen:
 <pre><code>import java.io.*;
 import java.util.Scanner;
 
 public class Hello {
 	public static void main(String args[]) {
-		Scanner scanner = new Scanner(System.in);
+		Scanner scanner;	// Beachtet den unterschied zwischen Datentyp('S') und Variable('s')!
+		scanner = new Scanner(System.in); // Legt einen Scanner an, der System.in überwacht
 		String name = scanner.next();
 		System.out.println("Hello " + name + "!");
 	}
 }</pre></code>
 Damit ist unser "Hello World"-Programm, schon richtig gut, denn es kann nun auf Nutzereingaben reagieren.
+
