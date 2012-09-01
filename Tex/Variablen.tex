@@ -1,4 +1,4 @@
-\section {Variablen und Datentypen}
+\chapter{Variablen und Datentypen}
 Computerprogramme weisen im Wesentlichen drei relativ unabhängige Komponenten auf: Eingabe, Verarbeitung und Ausgabe. Bis jetzt haben wir uns nur mit der Ausgabe beschäftigt.
 Die einfachste Form der Eingabe kennen wir auch schon: Wir setzen Werte im Quelltext. Ein Beispiel dafür ist unser "Hello World"-Proramm, indem wir festlegen das genau "Hello World" und nicht "foobar" ausgeben werden soll.
 Um komplexere Eingaben, Verarbeitung und die Ausgabe dieser veränderlichen Daten zu ermöglichen brauchen wir eine Möglichkeit Daten abzuspeichern und zu bearbeiten, die vor dem Programmaufruf noch nicht bekannt sind.
@@ -13,11 +13,11 @@ System.out.println(text); // gibt den Wert der Variablen text aus. </pre> </code
 Erhalten wir ein Programm, dass das selbe tut wie das ursprüngliche "Hello World"-Proramm.
 Dieses Programm ist allerding besser als das alte, denn die Ausgabe ist jetzt von der Eingabe (im Quelltext) getrennt.
 
-\subsection Befehle
+\section {Befehle}
 Wie wir sehen ist das "Hello World"-Programm länger geworden. Um Variablen zu manipulieren braucht man nämlich Befehle. Diese Befehle kann man daran erkennen, dass sie mit einem Semikolon enden. Abgearbeitet werden sie in der Reihenfolge in der man sie liest. Im Quelltext oben stehen drei Befehlsaufrufe:
 Die Deklaration einer Variablen, eine Wertzuweisung und ein Funktionsaufruf. Das sind drei der wichtigsten Befehlsarten.
 
-\subsubsection Deklaration und Definition
+\subsection {Deklaration und Definition}
 Um mit Variablen arbeiten zu können braucht man zwei Schritte: Deklaration und Definition.
 
 "Sei p eine Primzahl" entspricht in etwa dem, was man bei der Deklaration einer Variable tut. Um Werte digital abspeichern zu können muss man Wissen, um was für Daten es sich Handelt. Eine Zahl muss anders abgespeichtert werden, als zum Beispiel eine Zeichenkette wie "Hello World".
@@ -44,7 +44,7 @@ Beachtet, das der Datentyp von Rechter und Linker Seite der Zuweisung übereinst
 Um den Typ einer variablen zu ändern gibt es sogenannte Casts. Dafür gibt es verschiedene Methoden die vom Datentyp abhängen. Integrale Datentypen wie "int" oder "char" könnt ihr ineinander umwandeln, indem ihr den eingeklammerten Namen des Zieldatentyps vor die Variable schreibt: "char c = (char) intvariable;". Das "(char)" sorgt dann dafür, dass aus der Ganzzahl ein Buchstabe gemacht wird.
 Für andere Typänderungen gibt es Funktionen.
 
-\subsubsection Funktionsaufrufe
+\subsection {Funktionsaufrufe}
 Funktionen sind vorgefertigte Unterprogramme, die einen bestimmten Zweck erfüllen. Eine Funktion kennt ihr schon: "System.out.println()".
 Diese Funktion tut etwas, und gibt dann die Kontrolle wieder an den nächsten Befehl ab. Es gibt aber auch Funktionen, die einen Wert berechnen.
 Diesen Wert nennt man Rückgabewert. Die Funktion "Math.random()" hat als Rückgabewert einen zufälligen Wert.
@@ -54,7 +54,7 @@ Viele Funktionen, beispielsweise "System.out.println()", sind in der Lage Daten 
 Um diese Daten an die Funktion zu übergeben gibt es die Klammern nach dem Funktionsnamen. Dort kann man die entsprechenden Werte eintragen.
 Sollen der Funktion mehrere Werte übergeben werden, so müssen diese durch Kommata getrennt werden – die Reihenfolge der Parameter entscheidet dabei darüber, welcher Wert wofür benutzt wird.
 
-\subsection Einlesen von Werten
+\section {Einlesen von Werten}
 Um Werte einzulesen braucht man einen Variable vom Typ "Scanner". Mit dem Scanner kann man nicht nur von der Standarteingabe, sondern auch aus Dateien, Netzwerkverbindungen und anderen Quellen Daten einlesen. 
 Deswegen muss man Angeben, dass der Scanner die Daten aus "System.in" beziehen soll.
 Danach kann man mit scannervariable.next() die nächste Eingabe abholen. Im Quelltext könnte das zum Beispiel so aussehen:
