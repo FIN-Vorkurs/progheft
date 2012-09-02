@@ -8,20 +8,27 @@ An dieser Stelle lernen wir die ersten beiden Kommandos für das Terminal kennen
 Da in Unix alles eine Datei ist, sieht man auch die Unterverzeichnisse des aktuellen Verzeichnisses.
 Die Verzeichnisse im Wurzelverzeichnis sind bei den meisten Betriebssystemen (fast) gleich und jedes dieser Verzeichnisse erfüllt die selbe Bedeutung.
 
-* / - das Wurzelverzeichnis
-* /bin – Ausführbare Programme, z.B. die Shell /bin/sh 
-* /boot - der Betriebssystemkern und was zum hochfahren benötigt wird
-* /dev - „Devices“ zum Beispiel Festplatten, USB-Geräte, der Zufallszahlengenerator ...
-* /etc - Konfigurationsdateien für das Betriebssystem 
-* /home - Das Elternverzeichnis aller Nutzerverzeichnisse
-* /lib - Bibliotheken für andere Programme
-* /opt - manuell installierte Programme
-* /proc - Systemressourcen
-* /root - Das Heimatverzeichnis des „root“-Nutzers
-* /sbin - das „bin“ für Programme die nur root ausführen darf
-* /tmp - Temporäre Dateien
-* /usr - „unix system resources“ Datein die für alle Nutzer relevant sind
-* /var - Variabel
+\begin{table}
+\centering
+\begin{tabular}{l|l}
+Verzeichnis & Bedeutung \\ \hline
+/ & das Wurzelverzeichnis \\
+/bin & Ausführbare Programme, z.B. die Shell /bin/sh \\
+/boot & der Betriebssystemkern und was zum hochfahren benötigt wird \\
+/dev & „Devices“ zum Beispiel Festplatten, USB-Geräte, der Zufallszahlengenerator ...\\
+/etc & Konfigurationsdateien für das Betriebssystem \\
+/home & Das Elternverzeichnis aller Nutzerverzeichnisse \\
+/lib & Bibliotheken für andere Programme \\
+/opt & manuell installierte Programme \\
+/proc & Systemressourcen \\
+/root & Das Heimatverzeichnis des „root“-Nutzers \\
+/bin & das „bin“ für Programme die nur root ausführen darf \\
+/tmp & Temporäre Dateien \\
+/usr & „unix system resources“ Datein die für alle Nutzer relevant sind \\
+/var & Variabel
+\end{tabular}
+\label{UNIX-Verzeichnisse}
+\end{table}
 
 Außerdem gibt es noch Kurzschreibweisen für bestimmte Verzeichnisse. „.“ beszeichnet das aktuelle Verzeichnis, „..“ das Elternverzeichnis und „~“ das eigene Homeverzeichnis.
 Verzeichnisse die mit „.“ beginnen sind versteckt. Man kann sie anzeigen, wenn man ls mit dem Parameter „-a“ benutzt.
@@ -30,28 +37,35 @@ Verzeichnisse die mit „.“ beginnen sind versteckt. Man kann sie anzeigen, we
 Unix stammt aus Zeiten, in denen man einen Rechner mit mehreren „Terminals“ bedient hat. Ist man an so einem Terminal angemeldet, sieht man erstmal die Ausgabe des sog. „Command Line Interpreters“ – /bin/sh. Dieses Programm ist im wesentlichen dafür zuständig, andere Programme aufzurufen. Hinter dem Kommando „ls“ versteckt sich zum Beispiel ein Aufruf des Programms /bin/ls. Außerdem gibt es noch einige zusätzliche Kommandos, wie „help“. Das wichtigste Kommando in Unix ist „man“. Mit „man“ lassen sich die sogenannten Manpages zu einem Programm anzeigen. In der Manpage stehen alle wichtigen Informationen, die man zu einem Programm braucht.
 „man man“ gibt zum Beispiel eine Hilfeseite zur Benutzung der Manpages aus.
 
-\subsection{Wichtige Befehle}
-* cat - gibt den Inhalt einer Datei aus
-* cd - Verzeichnis wechseln
-* cp - kopiert eine Datei
-* date - zeigt das aktuelle Datum und die Uhrzeit an
-* echo - gibt die Eingabe zurück
-* exit - aktuelle Terminalsession beenden
-* gedit - ruft einen Texteditor auf
-* grep - Durchsuchen einer Datei
-* javac - Javacompiler aufrufen
-* java - ein Javaprogramm ausführen
-* ls - zeigt den Inhalt des aktuellen Verzeichnisses
-* man - zeigt eine Hilfeseite an
-* mkdir - legt ein Verzeichnis an
-* mv - verschiebt eine Datei
-* passwd - eigenes Passwort ändern
-* pwd - Zeigt das Verzeichnis an
-* rm - Datei löschen
-* ssh - eine Shell auf einem anderen Rechner öffnen
-* tar - Dateiarchive packen und entpacken
-* wget - herunterladen einer Datei
-* yes - wiederholt die Eingabe
+\begin{table}
+\centering
+\begin{tabular}{l|l}
+Befehl & Bedeutung \\ \hline
+cat & gibt den Inhalt einer Datei aus \\
+cd & Verzeichnis wechseln \\
+cp & kopiert eine Datei \\
+date & zeigt das aktuelle Datum und die Uhrzeit an \\
+echo & gibt die Eingabe zurück \\
+exit & aktuelle Terminalsession beenden \\
+gedit & ruft einen Texteditor auf \\
+grep & Durchsuchen einer Datei \\
+javac & Javacompiler aufrufen \\
+java & ein Javaprogramm ausführen \\
+ls & zeigt den Inhalt des aktuellen Verzeichnisses \\
+man & zeigt eine Hilfeseite an \\
+mkdir & legt ein Verzeichnis an \\
+mv & verschiebt eine Datei \\
+passwd & eigenes Passwort ändern \\
+pwd & Zeigt das Verzeichnis an \\
+rm & Datei löschen \\
+ssh & eine Shell auf einem anderen Rechner öffnen \\
+tar & Dateiarchive packen und entpacken \\
+wget & herunterladen einer Datei \\
+yes & wiederholt die Eingabe
+\end{tabular}
+\label{Befehle}
+\caption{Wichtige Befehle}
+\end{table}
 
 \subsection{Befehlssyntax}
 Um einen Befehl richtig ausführen zu können benötigt dieser eine bestimmte Form. Ein typischer Unixbefehl könnte so aussehen:
