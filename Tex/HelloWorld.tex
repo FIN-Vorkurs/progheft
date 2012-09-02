@@ -28,8 +28,14 @@ public class Hello {
 \end{lstlisting}
 
 Die erste Zeile enthält unter anderem den Namen des Programms nämlich „Hello“. Die Datei mit dem Quelltext muss demzufolge „Hello.java“ heißen. \\
-\lstinline$public static void main(String args[]) {$ ist der Anfang der Main-Funktion des Programmes. Hier stehen die Befehle, die nach Programmstart als erstes abgearbeitet werden. \\
-\lstinline$System.out.println("Hello World!");$ – Das ist der Befehl der „Hello World“ ausgibt. \lstinline$System.out.println$ ist der Befehl der Text ausgibt, „Hello World!“ der Text den wir ausgeben wollen. \\
+\begin{lstlisting}
+public static void main(String args[]) {
+\end{lstlisting}
+Markiert den Anfang der Main-Funktion des Programmes. In der Main-Funktion stehen die Befehle, die nach Programmstart als erstes abgearbeitet werden. \\
+\begin{lstlisting}
+System.out.println("Hello World!");
+\end{lstlisting}
+Das ist der Befehl der „Hello World“ ausgibt. \lstinline$System.out.println$ ist der Befehl der Text ausgibt, „Hello World!“ der Text den wir ausgeben wollen. \\
 Die beiden schließenden (geschweiften) Klammern sind das Ende der Main-Funktion und das Ende des Programmes. 
 Wenn wir ein anderes Programm schreiben wollen, müssen wir lediglich die „\lstinline$System.out.println()$“-Zeile durch andere Befehle ersetzen.
 Damit bleiben allerdings noch einige Stellen des Programmcodes unerklärt: \lstinline$//$ leitet einen Einzeiligen Kommentar ein. Der Rest der Zeile, beginnend mit den beiden Schrägstrichen wird beim Übersetzen des Programmes ignoriert.
