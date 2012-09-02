@@ -4,9 +4,11 @@
 
 Fast alle Bücher, Tutorials, Vorkurshefte und sonstige Programmierbeispiele beginnen mit einem einfachen Programm, das nichts tut als "Hello World!" auf der Konsole auszugeben.
 
-Im Grund behandelt man mit dem "Hello World!"-Programm zwei Fragen: 
-* Was und an welchen Stellen kann ich im Quelltext ändern, um ein tolleres Programm zu erhalten?
-* Wie komme ich von der Quelltext-Datei zum laufenden Programm?
+Im Grund behandelt man mit dem "Hello World!"-Programm zwei Fragen:
+\begin{itemize}
+\item Was und an welchen Stellen kann ich im Quelltext ändern, um ein tolleres Programm zu erhalten?
+\item Wie komme ich von der Quelltext-Datei zum laufenden Programm?
+\end{itemize}
 
 In den meisten Programmiersprachen gibt es eine Art "Rahmen" der die eigentliche Programmlogik umgibt.
 In Java sieht das Hello-World-Programm wie folgt aus: 
@@ -19,9 +21,10 @@ public class Hello {
 \end{verbatim}
 
 Die erste Zeile enthält unter anderem den Namen des Programms nämlich "Hello". Die Datei mit dem Quelltext muss demzufolge "Hello.java" heißen.
-"public static void main(String args[]) {" ist der Anfang der Main-Funktion des Programmes. Hier stehen die Befehle, die nach Programmstart als erstes abgearbeitet werden.
-System.out.println("Hello World!"); – Das ist der Befehl der ausgeführt wird. "System.out.println" ist der Befehl der Text ausgibt, "Hello World!" der Text den wir ausgeben wollen. Die beiden Schließenden Klammern sind das Ende der Main-Funktion und das Ende des Programmes. 
-Wenn wir also ein anderes Programm schreiben wollen, müssen wir lediglich den Befehl "System.out.println ..." durch andere Befehle ersetzen.
+\begin{verbatim} public static void main(String args[]) {\end{verbatim} ist der Anfang der Main-Funktion des Programmes. Hier stehen die Befehle, die nach Programmstart als erstes abgearbeitet werden.
+System.out.println("Hello World!"); – Das ist der Befehl der ausgeführt wird. "System.out.println" ist der Befehl der Text ausgibt, "Hello World!" der Text den wir ausgeben wollen. 
+Die beiden schließenden (geschweiften) Klammern sind das Ende der Main-Funktion und das Ende des Programmes. 
+Wenn wir also ein anderes Programm schreiben wollen, müssen wir lediglich die Zeile "System.out.println ..." durch andere Befehle ersetzen.
 
 Um das Programm auszuführen, müssen wir zuerst den Quelltext des Programms in Bytecode umwandeln lassen und dann die Java-Virtual-Maschine aufrufen, die den Bytecode aufsführt. 
 Für das Übersetzen des Quelltextes in Bytecode ist der Java-Compiler zuständig
