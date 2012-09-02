@@ -1,32 +1,42 @@
 \chapter {Hello World!}
+\lstset{language=Java}
 
-\section {Wozu "Hello World!"?}
+\section {Wozu „Hello World!“?}
 
-Fast alle Bücher, Tutorials, Vorkurshefte und sonstige Programmierbeispiele beginnen mit einem einfachen Programm, das nichts tut als "Hello World!" auf der Konsole auszugeben.
+Fast alle Bücher, Tutorials, Vorkurshefte und sonstige Programmierbeispiele beginnen mit einem einfachen Programm, das nichts tut als „Hello World!“ auf der Konsole auszugeben.
 
-Im Grund behandelt man mit dem "Hello World!"-Programm zwei Fragen:
+Im Grund behandelt man mit dem „Hello World!“-Programm zwei Fragen:
 \begin{itemize}
 \item Was und an welchen Stellen kann ich im Quelltext ändern, um ein tolleres Programm zu erhalten?
 \item Wie komme ich von der Quelltext-Datei zum laufenden Programm?
 \end{itemize}
 
-In den meisten Programmiersprachen gibt es eine Art "Rahmen" der die eigentliche Programmlogik umgibt.
+\subsection{Bestandteile des Hello-World-Progammes}
+In den meisten Programmiersprachen gibt es eine Art „Rahmen“ der die eigentliche Programmlogik umgibt.
 In Java sieht das Hello-World-Programm wie folgt aus: 
-\begin{verbatim}
+\begin{lstlisting}
+/*
+ * Vorkurs fuer Informatik
+ * Hello.java
+ *
+ */
 public class Hello {
   public static void main(String args[]) {
     System.out.println("Hello World!");	// gibt 'Hello World' aus.
   }
 }
-\end{verbatim}
+\end{lstlisting}
 
-Die erste Zeile enthält unter anderem den Namen des Programms nämlich "Hello". Die Datei mit dem Quelltext muss demzufolge "Hello.java" heißen.
+Die erste Zeile enthält unter anderem den Namen des Programms nämlich „Hello“. Die Datei mit dem Quelltext muss demzufolge „Hello.java“ heißen.
 \begin{verbatim} public static void main(String args[]) {\end{verbatim} ist der Anfang der Main-Funktion des Programmes. Hier stehen die Befehle, die nach Programmstart als erstes abgearbeitet werden.
-System.out.println("Hello World!"); – Das ist der Befehl der ausgeführt wird. "System.out.println" ist der Befehl der Text ausgibt, "Hello World!" der Text den wir ausgeben wollen. 
+\begin{verbatim}System.out.println("Hello World!");\end{verbatim} – Das ist der Befehl der „Hello World“ ausgibt. „System.out.println“ ist der Befehl der Text ausgibt, „Hello World!“ der Text den wir ausgeben wollen. 
 Die beiden schließenden (geschweiften) Klammern sind das Ende der Main-Funktion und das Ende des Programmes. 
-Wenn wir also ein anderes Programm schreiben wollen, müssen wir lediglich die Zeile "System.out.println ..." durch andere Befehle ersetzen.
+Wenn wir ein anderes Programm schreiben wollen, müssen wir lediglich die Zeile „System.out.println ...“ durch andere Befehle ersetzen.
+Damit bleiben allerdings noch einige Stellen des Programmcodes unerklärt: „//“ Leitet einen Einzeiligen Kommentar ein. Der Rest der Zeile, beginnend mit „//“ wird beim Übersetzen des Programmes unbeachtet.
+Mehrzeilige Kommentare beginnen mit „/*“ und enden mit „*/“. Der Übersicht halber führt man oftmal die Reihe mit Sternen von unten bis oben fort.
+
 
 Um das Programm auszuführen, müssen wir zuerst den Quelltext des Programms in Bytecode umwandeln lassen und dann die Java-Virtual-Maschine aufrufen, die den Bytecode aufsführt. 
 Für das Übersetzen des Quelltextes in Bytecode ist der Java-Compiler zuständig
-Unter UNIX ruft man den Java-Compiler aus dem Terminal mit "javac Hello.java" auf. Der Compiler hat nun, sofern das Programm keine Fehler enthält eine Datei mit dem Namen "Hello.class" erzeugt (oder eine ältere Version überschrieben) – diese Datei enthält den Bytecode.
-Die JVM kann man mit dem Befehl "java" aufrufen. "java Hello" führt den Bytecode in Hello.class aus.
+Unter UNIX ruft man den Java-Compiler aus dem Terminal mit „javac Hello.java“ auf. Der Compiler hat nun, sofern das Programm keine Fehler enthält eine Datei mit dem Namen „Hello.class“ erzeugt (oder eine ältere Version überschrieben) – diese Datei enthält den Bytecode.
+Die JVM kann man mit dem Befehl „java“ aufrufen. „java Hello“ führt den Bytecode in Hello.class aus.
