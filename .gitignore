@@ -1,3 +1,5 @@
 *.swp
 *.aux
+*.out
+*.log
 Tex/Makefile
