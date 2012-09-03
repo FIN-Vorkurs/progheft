@@ -28,7 +28,20 @@ Um mit Variablen arbeiten zu können braucht man zwei Schritte: Deklaration und 
 Glücklicherweise müssen wir als Programmierer uns keine Gedanken mehr darum machen, wie die Daten intern repräsentiert werden.
 Um auszudrücken um was für Daten es sich handelt gibt es sogenannte Datentypen. Eine kleine Auswahl der verfügbaren Typen findest du in der Tabelle.
 
-todo: Tabelle mit Datentypen hier einfügen.
+\begin{table}
+\centering
+\begin{tabular}{l|l|l}
+Java-Code & Beispiel & Bedeutung \\ \hline
+int & 42 & Ganzzahlen \\
+double & 3.1415 & Fließkommazahlen \\
+char & q & Buchstaben \\
+boolean & false & Wahrheitswerte \\
+String & \lstinline$"Foobar"$ & Zeichenketten \\
+
+\end{tabular}
+\label{Datentypen}
+\caption{Datentypen in Java}
+\end{table}
 
 Der Befehl für die Definition einer Variablen sieht so aus: 
 \begin{lstlisting}
