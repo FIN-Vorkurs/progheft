@@ -1,0 +1,117 @@
+\chapter{Guter Programmierstil}
+
+Oder: Wie schreibe ich meinen Code, sodass ihn auch andere lesen können?
+
+''Guter'' Code ist unter Programmierern immer ein beliebtes Streitthema, weil jeder dort seine eigene Definition von gutem Code hat. Es gibt also keine allgemeingültigen Regeln, die man bei Code zu beachten hat. Trotzdem gibt es einige Dinge, die man auf jeden Fall machen sollte. Um die Wichtigkeit von sauberem Code zu erkennen, möchte ich zunächst mal die Unterschiede in der Lesbarkeit demonstrieren:
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+public class A{public static void main(String[] args)
+{int a=2;int b=3;int c=1;for(int i=0;i<b;i++){c=c*a;}
+System.out.println(c);}}
+\end{lstlisting}
+\end{minipage}
+
+Obenstehend ist ein Beispiel ohne jede Formatierung. Der gesamte Code steht einfach in einer Zeile (für die Lesbarkeit habe ich trotzdem Zeilenumbrüche hinzugefügt). Dieser Code würde so kompiliert und mit dem korrekten Ergebnis ausgeführt werden. Probiert einfach mal herauszubekommen, was dieser Code macht.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+public class A{
+public static void main(String[] args){
+int a=2;
+int b=3;
+int c=1;
+for(int i=0;i<b;i++){
+c=c*a;
+}
+System.out.println(c);
+}
+}
+\end{lstlisting}
+\end{minipage}
+
+Dieser Code demonstriert eine der ersten Grundsätze: Jede Anweisung kommt in eine einzelne Zeile. Es erhöht die Übersicht enorm und der Code ist schon viel einfacher zu lesen. Aber es geht natürlich noch besser.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+public class A{
+  public static void main(String[] args){
+    int a=2;
+    int b=3;
+    int c=1;
+    for(int i=0;i<b;i++){
+      c=c*a;
+    }
+    System.out.println(c);
+  }
+}
+\end{lstlisting}
+\end{minipage}
+
+Dieser Code enthält Einrückungen. Diese Einrückungen demonstrieren einen zusammenhängenden Codeblock. Insbesondere bei mehreren und komplexeren Funktionen hilft dies enorm um auf einen Blick mitzubekommen, welcher Code in welche Funktion / Schleife / Verzweigung gehört.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+public class Potenzieren{
+  public static void main(String[] args){
+    int basis=2;
+    int exponent=3;
+    int ergebnis=1;
+    for(int i=0;i<exponent;i++){
+      ergebnis=ergebnis*basis;
+    }
+    System.out.println(ergebnis);
+  }
+}
+\end{lstlisting}
+\end{minipage}
+
+Im obenstehenden Code habe ich (fast) alle Namen die ich ersetzen kann ersetzt. Jede Variable, jeder Funktionsname und jeder Klassenname sollte widerspiegeln wozu die jeweilige Entität da ist. Eine Ausnahme ist auch im obenstehenden Beispiel zu erkennen: Zählvariablen in Schleifen werden in der Regel mit \textit{i, j, k} usw. benannt. Bei diesem Code kann man sehr leicht erkennen, was gemacht wurde weil man drei einfach Regeln beachtet hat:
+
+\begin{itemize}
+	\item jede Anweisung kommt in eine eigene Zeile
+	\item jeder Inhalt zwischen zwei geschweiften Klammern wird eingerückt
+	\item jeder Name den ihr wählen könnt soll einen Aussagekräftigen Namen bekommen
+\end{itemize}
+
+\section{Kommentierung}
+
+Kommentierung ist den meisten Programmierern ebenfalls ein lästiges Thema. Aber auch hier gilt wieder: Gute Kommentierung macht den Code lesbarer. Die Kommentierung von Code findet auf drei Ebenen statt:
+
+\begin{itemize}
+	\item auf Klassenebene
+	\item auf Funktionsebene
+	\item auf Anweisungsebene im Code
+\end{itemize}
+
+Auf allen drei Ebenen erfüllen die Kommentare unterschiedliche Aufgaben. Auf Klassenebene wird die Frage ''Was macht diese Klasse?'' beantwortet. Auf Funktionsebene wird die Frage ''Wie wird die Aufgabe in der Funktion gelöst?'' beantwortet. Auf Anweisungsebene erklärt ein Kommentar, warum genau diese Anweisung durchgeführt wird. Als Faustregel gilt: wenn ihr vor eine Funktion oder eine Anweisung schreiben müsst, was dort passiert ist, dann habt ihr die Funktion oder die verwendeten Variablen nicht gut benannt. Ein Beispiel für Kommentierung:
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+/*
+ * Diese Klasse potenziert zwei Integer und gibt das 
+ * Ergebnis auf der Konsole aus.
+ */
+public class Potenzieren{
+
+  /*
+   * Die Funktion fuehrt das Potenzieren aus, indem sie 
+   * die Basis mehrfach in einer Schleife multipliziert
+   */
+  public static void main(String[] args){
+    int basis=2;
+    int exponent=3;
+    //Das Ergebnis wird mit 1 initialisiert, weil x^0=1
+    int ergebnis=1;
+    for(int i=0;i<exponent;i++){
+      ergebnis=ergebnis*basis;
+    }
+    System.out.println(ergebnis);
+  }
+}
+\end{lstlisting}
+\end{minipage}
+
+Im obenstehenden Code siehst du zwei verschiedene Arten der Kommentierung. Ein einzeiliger Kommentar wird mit // eingeleitet. Dieser Kommentar geht exakt bis zum nächsten Zeilenumbruch. Ein mehrzeiliger Kommentar wird von \textit{/*Kommentar*/} umschlossen. Insbesondere in größeren Projekten im Laufe deines Studiums sollte jede Klasse und jede Funktion einen Kommentar besitzen. Die Anweisungen bekommen nur dann einen Kommentar wenn die Frage nach dem warum beantwortet werden muss.
+
+Insbesondere für die Arbeit mit Kommentaren gilt: Wenn du 4 Programmierer nach dem richtigen Kommentieren fragst wirst du 5 verschiedene Antworten bekommen. Deshalb ist die oben stehende Variante als Vorschlag zu betrachten. Für welchen Stil du dich auch entscheidest: Guter Code braucht Kommentare.
