@@ -1,10 +1,13 @@
 \chapter{UNIX}
 
-Viele der Grundprinzipien von UNIX sind in heutigen Betriebssystem noch vorhanden und mit einigen dieser Betriebssysteme werdet ihr im laufe eures Studiums noch zu tun haben.
+\lstset{language=bash}
+Viele der Grundprinzipien von UNIX sind in heutigen Betriebssystemen noch vorhanden und mit einigen dieser Betriebssysteme werdet ihr im laufe eures Studiums noch zu tun haben.
 
 \section{Verzeichnisstruktur}
-In Unix wird alles, egal ob es sich um eine Netzwerkschnittstelle, die Festplatte oder eine Musikdatei handelt als Datei repräsentiert. Alle diese Dateien lassen sich im sogenannten „Verzeichnissbaum“ des Betriebssystems finden. Das wohl wichtigste Verzeichnis in UNIX ist „/“ – das Wurzelverzeichnis. In diesem Verzeichnis liegen alle anderen Verzeichnisse.
-An dieser Stelle lernen wir die ersten beiden Kommandos für das Terminal kennen: „ls“ und „cd“. Sie sind die wichtigsten Kommandos für die Navigation durch den Verzeichnissbaum von Unix. „cd“ steht für „change directory“ und lässt uns das Verzeichnis wechseln. Gibt man also „cd /“ ins Terminal ein, so wechselt man ins Wurzelverzeichnis. „ls“ steht für „list search“, es liefert eine Auflistung der Dateien im aktuellen Ordner.
+In Unix wird alles, egal ob es sich um eine Netzwerkschnittstelle, die Festplatte oder eine Musikdatei handelt als Datei repräsentiert. Alle diese Dateien lassen sich im sogenannten „Verzeichnissbaum“ des Betriebssystems finden. Das wohl wichtigste Verzeichnis in UNIX ist \lstinline$/$ – das Wurzelverzeichnis. In diesem Verzeichnis liegen alle anderen Verzeichnisse.
+
+An dieser Stelle lernen wir die ersten beiden Kommandos für das Terminal kennen: \lstinline$ls$ und \lstinline$cd$.
+Sie sind die wichtigsten Kommandos für die Navigation durch den Verzeichnissbaum von Unix. \lstinline$cd$ steht für „change directory“ und lässt uns das Verzeichnis wechseln. Gibt man also \lstinline$cd /$ ins Terminal ein, so wechselt man ins Wurzelverzeichnis. \lstinline$ls$ steht für „list search“, es liefert eine Auflistung der Dateien im aktuellen Ordner.
 Da in Unix alles eine Datei ist, sieht man auch die Unterverzeichnisse des aktuellen Verzeichnisses.
 Die Verzeichnisse im Wurzelverzeichnis sind bei den meisten Betriebssystemen (fast) gleich und jedes dieser Verzeichnisse erfüllt die selbe Bedeutung.
 
@@ -34,8 +37,11 @@ Außerdem gibt es noch Kurzschreibweisen für bestimmte Verzeichnisse. „.“ b
 Verzeichnisse die mit „.“ beginnen sind versteckt. Man kann sie anzeigen, wenn man ls mit dem Parameter „-a“ benutzt.
 
 \section{Arbeiten im Textmodus}
-Unix stammt aus Zeiten, in denen man einen Rechner mit mehreren „Terminals“ bedient hat. Ist man an so einem Terminal angemeldet, sieht man erstmal die Ausgabe des sog. „Command Line Interpreters“ – /bin/sh. Dieses Programm ist im wesentlichen dafür zuständig, andere Programme aufzurufen. Hinter dem Kommando „ls“ versteckt sich zum Beispiel ein Aufruf des Programms /bin/ls. Außerdem gibt es noch einige zusätzliche Kommandos, wie „help“. Das wichtigste Kommando in Unix ist „man“. Mit „man“ lassen sich die sogenannten Manpages zu einem Programm anzeigen. In der Manpage stehen alle wichtigen Informationen, die man zu einem Programm braucht.
-„man man“ gibt zum Beispiel eine Hilfeseite zur Benutzung der Manpages aus.
+Unix stammt aus Zeiten, in denen man einen Rechner mit mehreren „Terminals“ bedient hat. 
+Ist man an so einem Terminal angemeldet, sieht man erstmal die Ausgabe des sog. „Command Line Interpreters“ – /bin/sh.
+Dieses Programm ist im wesentlichen dafür zuständig, andere Programme aufzurufen. Hinter dem Kommando „ls“ versteckt sich zum Beispiel ein Aufruf des Programms /bin/ls. Außerdem gibt es noch einige zusätzliche Kommandos, wie „help“. 
+Das vermutlich wichtigste Kommando in Unix ist „man“. Mit „man“ lassen sich die sogenannten Manpages zu einem Programm anzeigen. In der Manpage stehen alle wichtigen Informationen, die man zu einem Programm braucht.
+„man man“ gibt zum Beispiel eine Hilfeseite zur Benutzung dieser Manpages aus.
 
 \begin{table}
 \centering
@@ -49,7 +55,7 @@ echo & gibt die Eingabe zurück \\
 exit & aktuelle Terminalsession beenden \\
 gedit & ruft einen Texteditor auf \\
 grep & Durchsuchen einer Datei \\
-javac & Javacompiler aufrufen \\
+javac & Javaquellcode in Bytecode übersetzen \\
 java & ein Javaprogramm ausführen \\
 ls & zeigt den Inhalt des aktuellen Verzeichnisses \\
 man & zeigt eine Hilfeseite an \\
@@ -69,28 +75,30 @@ yes & wiederholt die Eingabe
 
 \subsection{Befehlssyntax}
 Um einen Befehl richtig ausführen zu können benötigt dieser eine bestimmte Form. Ein typischer Unixbefehl könnte so aussehen:
-„ls -lBh ~/“. ls ist der ausgeführte Befehl, -l, -B und -h sind Parameter für das Programm ls und „~/“ der Pfad zum Verzeichnis, dessen Datein ls auflisten soll. „~“ ist eine abgekürzte Schreibweise für das eigene home-Verzeichnis.i
-Genau so werden die Parameter und der richtige Aufruf von ls auch in der Manpage beschrieben. Mehrere Parameter können oftmals auch zusammengefasst werden, so dass „ls -l -a ...“ die selbe Bedeutung hat wie „ls -la ..“
+\lstinline$ls -lBh ~/$. ls ist der ausgeführte Befehl, -l, -B und -h sind Parameter für das Programm ls und \lstinline$~/$ der Pfad zum Verzeichnis, dessen Datein ls auflisten soll. \lstinline$~$ ist eine abgekürzte Schreibweise für das eigene home-Verzeichnis.i
+Genau so werden die Parameter und der richtige Aufruf von ls auch in der Manpage beschrieben. Mehrere Parameter können oftmals auch zusammengefasst werden, so dass \lstinline$ls -l -a ..$ die selbe Bedeutung hat wie \lstinline$ls -la ..$
 
 \subsection{Befehle verknüpfen}
 In Unix können auch mehrere Befehle verknüpft werden. Dazu gibt es mehrere nützliche Operatoren.
 \begin{itemize}
-\item „command \&“ führt das Kommando im Hintergrund aus
-\item Mit „command1 \&\& command2“ kann man mehrere Kommandos hintereinander ausführen z.B. „mkdir foo \&\& ls -l \&\& cd foo/“
-\item Mit „command1 | command2“ kann man die Ausgabe von Kommando1 in Kommando2 verwenden  z.B. „ls -l | grep foo“
+\item \lstinline$command &$ führt das Kommando im Hintergrund aus
+\item Mit \lstinline$command1 && command2$ kann man mehrere Kommandos hintereinander ausführen z.B. \lstinline$mkdir foo && ls -l && cd foo/$
+\item Mit \lstinline$command1 | command2$ kann man die Ausgabe von Kommando1 in Kommando2 verwenden  z.B. \lstinline$ls -l | grep foo$
 \end{itemize}
 
 Man kann mit diesen Verknüpfungen aber auch sehr viel Schabernack treiben, man sollte davon nicht mehr benutzen als man benötigt, da man so unnötige Fehler vermeiden kann.
 
 Auch diese Operatoren sind oft nützlich:
 \begin{itemize}
-\item „command $\gg$ file“ schreibt die Ausgabe der Befehls in die angegebene Datei
-\item „command $\gg\gg$ file“ hängt die Ausgabe hinten an die Datei an
+\item \lstinline$command > file$ schreibt die Ausgabe der Befehls in die angegebene Datei
+\item \lstinline$command >> file$ hängt die Ausgabe hinten an die Datei an
 \end{itemize}
 
 \subsection{Vom Textmodus zum Graphikmodus und wieder zurück}
 Wie man zum Beispiel in den Rechnerpools der Fakultät sieht, besitzen moderne Unixoide Betriebssysteme nicht mehr ausschließlich den Textmodus. Man kann auch wie gewohnt in Fenstern bunte Bildchen anschauen.
+
 Im Gegensatz zu Windows, kann man hier allerdings Programme nicht wirklich von der Shell losgelöst starten, die Ein- und Ausgaben sind nur für den User nicht mehr sichtbar. Besonders deutlich wird wenn man zum Beispiel „firefox“ über ein Terminal startet – ob Webbrowser, Spiel oder Programmierumgebung – jedes Programm hängt an der Shell.
+
 Mit dem Befehl „ssh“ kann man auch eine Shell auf einem anderen Unix-Rechner öffnen und sich Beispielsweise von Zuhause im Rechnerpool der FIN einloggen und dort arbeiten – sogar mit Programmen die man lokal gar nicht installiert hat. Mit „ssh -x“ kann man auch Graphikmodus-Programme benutzen.
 Im Gegensatz zum Remotedesktop werden hier allerdings wesentlich weniger Daten übertragen und der Computer bleibt (einigermaßen) schnell.
 
