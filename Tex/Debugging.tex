@@ -1,0 +1,50 @@
+\chapter{Debugging}
+
+Wenn ihr Code schreibt, wird es mit einer hohen Wahrscheinlichkeit dazu kommen, dass dieser Code Fehler enthält. Bevor ihr das Programm bei eurem Auftraggeber - während des Studiums euer Tutor oder Betreuer - abgebt, müssen diese Fehler behoben sein. Es gibt zwei Arten von Fehlern: Syntaktische und semantische Fehler. Bei syntaktischen Fehler wird euch der Compiler sagen, dass ihr etwas falsch gemacht habt. Typische Fehler dabei sind, dass man sich bei einer Variable vertippt habt, dass ihr ein Semikolon vergessen habt oder ähnliches. Um diese Fehler zu beheben, müsst ihr nur lernen die Fehlermeldungen des Compilers zu interpretieren. Diese Aufgabe ist mit etwas Übung leicht zu bewältigen.
+
+Schwieriger wird die Aufgabe bei semantischen Fehlern. Semantische Fehler treten erst zur Laufzeit des Programms auf. Entweder werdet ihr dann zur Laufzeit einen Programmabsturz erleiden oder das Programm liefert einfach nicht das Ergebnis was ihr erwartet. Bei einem Programmabsturz wird es wieder eine Fehlermeldung geben, die ihr interpretieren könnt: Es wird eine Exception geworfen. Typische Fehler die zur Laufzeit auftreten sind folgende:
+
+\begin{itemize}
+	\item Zugriff auf eine nicht vorhandene Arrayposition
+	\item Division durch 0
+	\item Zugriff auf ein nicht initialisiertes Objekt
+\end{itemize}
+
+Auch diese Fehler könnt ihr mit Hilfe der Fehlernachrichten sehr schnell lokalisieren. Sie zu lösen ist nur eventuell ein wenig schwieriger, weil ihr nicht sofort wisst, wie die Werte zur Laufzeit zu Stande gekommen sind. Das folgende Codebeispiel verdeutlicht das Problem:
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+public class Div{
+  public static void main(String[] args){
+    BufferedReader br = new BufferedReader
+             (new InputStreamReader(System.in));
+    int number1 = Integer.parseInt(br.readLine());
+    int number2 = Integer.parseInt(br.readLine());
+    int result = number1 / number2;
+  }
+}
+\end{lstlisting}
+\end{minipage}
+
+Ihr lest zwei Werte von der Konsole. Wenn  der Nutzer sich dann einfallen lässt, für den zweiten Wert eine 0 einzugeben werdet ihr eine Exception bekommen, da die Division durch im Rechner 0 nicht möglich ist.
+
+Die einfachste Art diese Art von Fehler zu beheben ist, die Werte der Variablen an dieser Stelle zu überprüfen. Eine sehr einfache Art ist sie einfach aus der Konsole auszugeben bevor die kritische Zeile ausgeführt wird:
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+public class Div{
+  public static void main(String[] args){
+    BufferedReader br = new BufferedReader
+             (new InputStreamReader(System.in));
+    int number1 = Integer.parseInt(br.readLine());
+    int number2 = Integer.parseInt(br.readLine());
+    System.out.println(number1 + " " + number2);
+    int result = number1 / number2;
+  }
+}
+\end{lstlisting}
+\end{minipage}
+
+Dann seht ihr, welche Werte den Fehler auslösen und könnt ihn behandeln. Eine zweite Möglichkeit, die von den Compilern der meisten Programmiersprachen bereitgestellt wird sind Breakpoints. Wenn ihr Eclipse benutzt, könnt ihr einfach mit einem Rechtsklick auf die auf den Editorrand neben der Zeile einen Breakpoint setzen. Wenn ihr jetzt unter \textit{Run$\rightarrow$Debug} das Programm laufen lasst wird das Programm an jedem Breakpunkt anhalten und euch die Werte aller gesetzten Variablen an der Stelle ausgeben.
+
+Mit diesen Informationen müsst ihr nun das tun was ein Computer nicht kann: Nachdenken. Ihr müsst herausfinden wie der Code verändert werden muss, damit er fehlerfrei läuft und die gewünschten Ergebnisse produziert. Damit schließt sich der Kreis zum ersten Kapitel wieder: Der Rechner kann für euch sehr schnell rechnen aber er kann euch nicht das Denken ersparen.

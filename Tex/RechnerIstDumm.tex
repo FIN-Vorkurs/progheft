@@ -1,28 +1,62 @@
-\chapter{Das ist eine Kapitelüberschrift}
-\section{Das ist eine Überschrift in einem Kapital}
-\subsection{und so weiter...}
+\chapter{Die Grenzen eines Computers}
 
-Das ist ein wenig einfacher Text, nichts einfacher als das. Für mathematische Ausdrücke wie $a^b$ benutzen wir diese Dollarzeichen.
+Der Computer kann eigentlich nur eine Sache: sehr schnell rechnen. Die Programme, die diese Fähigkeit ausnutzen lassen einen Computer oft sehr viel klüger erscheinen als er aussieht. Ein sehr berühmtes Programm, welches genau diese Tatsache demonstriert wurde in den 70er Jahren von Joseph Weizenbaum geschrieben: ELIZA. Es ist ein Programm, welches mit einem menschlichen Nutzer kommunizieren kann. Hier ein Beispiel davon:
 
 \begin{itemize}
-	\item hier
-	\item sind
-	\item Stichpunkte
+	\item[ELIZA:] Is something troubling you ?
+	\item[YOU:] Yes, actually I try to setup an example with you.
+	\item[ELIZA:] I understand.
+	\item[YOU:] Can you help me with this?
+	\item[ELIZA:] You like to think I help you -- don't you ?
+	\item[YOU:] Yes I do.
+	\item[ELIZA:] You say yes you do ?
+	\item[YOU:] Yes I do.
+	\item[ELIZA:] Do you say yes you do for some special reason ?
+	\item[YOU:] Because I want you to help me.
+	\item[ELIZA:] Suppose you got I to help you soon.
+	\item[YOU:] I don't understand you.
+	\item[ELIZA:] Does that trouble you ?
+	\item[YOU:] Yes, a little bit
+	\item[ELIZA:] You seem to be quite positive.
+	\item[YOU:] You talk nonsense.
+	\item[ELIZA:] Oh, I talk nonsense ?
+	\item[YOU:] Yes you do.
+	\item[ELIZA:] We were discussing you -- not me.
 \end{itemize}
 
-Und auch eine Tabelle macht oft Sinn:
+Unter \url{http://www.masswerk.at/elizabot/} könnt ihr es selber ausprobieren wenn ihr wollt. Auch dieses Programm zeigt keinerlei Intelligenz, obgleich die Antworten meistens Sinn machen. Der Computer macht nichts anderes als eine Antwort, basierend auf den Informationen die er in einer Datenbank hat, auszurechnen die wahrscheinlich eine sinnvolle Antwort auf die Aussage des Nutzers ist. Damit der Computer so etwas kann, müsst ihr als Programmierer ihm beibringen, wie er mit simplen Rechenoperationen dieses Ergebnis erreicht.
 
-%l: links, r: right, c:zentriert, |:Trennlinie, p{}:exakte Spaltenbreite
-\begin{tabular}{lrc|p{2cm}}
-	a&b&c&d\\% & zum Trennen der Spalteninhalte, \\ fuer neue Zeile
-	\hline%eine Trennlinie
-	e&f&g&h\\
-\end{tabular}
+\section{Arbeitsweise eines Rechners}
 
-Und auch eine Grafik \ref{soFindeIchDasBildWieder} will ich dir nicht vorenthalten. Sie wird nicht zwingend genau da auftauchen wo du sie hinschreibst.
+Ein Rechner versteht nur einen sehr begrenzten Satz von Befehlen. Diese Befehle sind zum Beispiel Laden von oder Speichern in eine Speicheradresse, Addieren von zwei Werten oder das Vergleichen von zwei Werten. Mit Hilfe solcher sehr einfachen Anweisungen müssen alle Programme geschrieben werden. Als ob das noch nicht schwer genug wäre, versteht der Rechner nur die Eingabe von Einsen und Nullen. 
 
-\begin{figure}
-	\includegraphics[scale=1]{images/farafin_logo_schwarz_auf_weiss.png}
-	\caption{Das ist eine Bildunterschrift}
-	\label{soFindeIchDasBildWieder}
-\end{figure}
+\begin{itemize}
+	\item[]1100 0000 0000 0000
+	\item[]1001 1010 1011 1000
+	\item[]1001 1010 1100 0000
+	\item[]0000 0000 0000 0000
+	\item[]0000 0000 0000 0000
+	\item[]1001 1000 1100 0000
+	\item[]1100 1111 1111 1011
+\end{itemize}
+
+Den obenstehenden Maschinencode kann ein Rechner lesen und interpretieren. Da dieser Code aber weder gut lesbar noch einfach zu schreiben ist, entwickelten Informatiker im Laufe der Jahre verschiedene Abstraktionen um das Programmieren einfacher zu machen.
+
+Eine Abstraktionsebene ist Assembler. Ein Beispiel für ein Assemblerprogramm:
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+ORG 100h 
+push cs
+pop ds 
+mov ah, 09h
+mov dx, Meldung 
+int 21h
+int 20h
+ 
+Meldung: db "Hello World"
+         db "$" 
+\end{lstlisting}
+\end{minipage}
+
+Das Programm macht nichts außer einem ''Hello World'' auf der DOS-Konsole auszugeben. Das ist zwar besser lesbar als der Maschinencode aber immer noch nicht gut lesbar. Deshalb gibt es eine weitere Abstraktionsebene. Diese Abstraktionsebene sind die höheren Programmiersprachen wie C, C++, Java, Python und so weiter. Auf dieser Abstraktionsebene programmieren die meisten Programmierer. In diesem Vorkurs werden wir uns mit der Sprache Java beschäftigen.
