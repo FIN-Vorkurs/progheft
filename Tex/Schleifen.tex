@@ -2,7 +2,7 @@
 
 \section{Schleifen}
 
-Mit dem bisher gelernten Wissen sollte folgende Aufgabe für dich leicht zu lösen sein: Schreib ein Programm, das die Zahlen von 1 bis 12 ausgibt. Etwas schwieriger wird die Aufgabe, wenn du die Zahlen von 1 bis einer Million ausgeben sollst oder die Obergrenze von einer Nutzereingabe abhängt. An dieser Stelle kommen Schleifen ins Spiel: Sie führen einen Anweisungsblock solange aus, bis eine bestimmte Bedingung erfüllt (oder nicht mehr erfüllt) ist. Java kennt, wie viele andere Programmiersprachen auch drei verschiedene Arten von Schleifen: Die \textit{for}-Schleife, die \textit{while}-Schleife und die \textit{do-while}-Schleife.
+Mit dem bisher gelernten Wissen sollte folgende Aufgabe für dich leicht zu lösen sein: Schreibe ein Programm, das die Zahlen von 1 bis 12 ausgibt. Etwas schwieriger wird die Aufgabe, wenn du die Zahlen von 1 bis einer Million ausgeben sollst oder die Obergrenze von einer Nutzereingabe abhängt. An dieser Stelle kommen Schleifen ins Spiel: Sie führen einen Anweisungsblock solange aus, bis eine bestimmte Bedingung erfüllt (oder nicht mehr erfüllt) ist. Java kennt, wie viele andere Programmiersprachen auch drei verschiedene Arten von Schleifen: Die \textit{for}-Schleife, die \textit{while}-Schleife und die \textit{do-while}-Schleife.
 
 \subsection{Die FOR-Schleife}
 
@@ -28,13 +28,13 @@ public class ForSchleife {
 \end{lstlisting}
 \end{minipage}
 
-Eine \textit{for}-Schleife braucht drei Informationen über die Laufvariable: Ihren Initialwert, hier mit \textit{int i = 1} geschehen, einen bool'schen Ausdruck wann die Schleife abbrechen soll, hier mit $i <=12$ angegeben. Das bedeutet, dass die Schleife nicht mehr ausgeführt wird, sobald $i$ diese Bedingung nicht mehr erfüllt, also 12 erreicht.
+Eine \textit{for}-Schleife braucht drei Informationen über die Laufvariable: Ihren Initialwert, hier mit \textit{int i = 1} geschehen, einen bool'schen Ausdruck wann die Schleife abbrechen soll, hier mit $i <=12$ angegeben. Das bedeutet, dass die Schleife nicht mehr ausgeführt wird, sobald $i$ diese Bedingung nicht mehr erfüllt, also 13 erreicht.
 
 Am Ende benötigt man noch eine Aktion, die nach jedem Schleifendurchlauf gemacht werden soll, in diesem Fall wird mit \textit{i=i+1} die Laufvariable nach jedem Schleifendurchlauf inkrementiert.
 
 \subsection{Die WHILE-Schleife}
 
-Der Unterschied zu der \textit{for}-Schleife ist im Wesentlichen, dass keine konkrete Initialisierung benötigt und auf eine Behandlung der Variable nach jedem Schleifendurchlauf verzichtet. Im Struktogramm hat die \textit{while}-Schleife auch eine eigene Abbildung (\ref{while}).
+Der Unterschied zu der \textit{for}-Schleife ist im Wesentlichen, dass keine konkrete Initialisierung benötigt und auf eine Behandlung der Variable nach jedem Schleifendurchlauf verzichtet wird. Im Struktogramm hat die \textit{while}-Schleife auch eine eigene Abbildung (\ref{while}).
 
 \begin{figure}
 	\begin{center}\includegraphics[scale=1]{images/while.png}\end{center}
@@ -105,7 +105,7 @@ public class IfThenElse {
 \end{lstlisting}
 \end{minipage}
 
-Hier wurde vergessen, die Variable, die in der Bedingung geprüft wird, zu ändern. Die Bedingung \textit{i<=12} wird damit immer wahr sein und damit wird die Schleife nie verlassen. Wenn ihr also ein Programm schreibt, es laufen lasst und es hört einfach nicht auf zu rechnen, dann ist es möglicherweise solche eine Endlosschleife die das Problem erzeugt. Es ist eure Aufgabe als Programmierer, darauf zu achten das jede Schleife terminiert.
+Hier wurde vergessen, die Variable, die in der Bedingung geprüft wird, zu ändern. Die Bedingung \textit{$i\le 12$} wird damit immer wahr sein und damit wird die Schleife nie verlassen. Wenn ihr also ein Programm schreibt, es laufen lasst und es hört einfach nicht auf zu rechnen, dann ist es möglicherweise solche eine Endlosschleife die das Problem erzeugt. Es ist eure Aufgabe als Programmierer, darauf zu achten das jede Schleife terminiert.
 
 Im letzten Kapitel hast du bereits das Schlüsselwort \textit{break;} kennengelernt. Es wurde dazu verwendet um sofort aus einer \textit{switch}-Anweisung herauszuspringen. Ein \textit{break;} in einer Schleife hat die gleiche Funktion: Die Ausführung der Schleife wird sofort beendet und der Code wird nach der Schleife fortgesetzt.
 
