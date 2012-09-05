@@ -27,14 +27,14 @@ Verzeichnis & Bedeutung \\ \hline
 /root & Das Heimatverzeichnis des „root“-Nutzers \\
 /sbin & das „bin“ für Programme die nur root ausführen darf \\
 /tmp & Temporäre Dateien \\
-/usr & „unix system resources“ Datein die für alle Nutzer relevant sind \\
-/var & Variabel
+/usr & „unix system resources“ Dateien die für alle Nutzer relevant sind \\
+/var & Variabler Inhalt, in /var/log verstecken sich diverse Log-Files
 \end{tabular}
 \label{UNIX-Verzeichnisse}
 \end{table}
 
 Außerdem gibt es noch Kurzschreibweisen für bestimmte Verzeichnisse. „.“ beszeichnet das aktuelle Verzeichnis, „..“ das Elternverzeichnis und „~“ das eigene Homeverzeichnis.
-Verzeichnisse die mit „.“ beginnen sind versteckt. Man kann sie anzeigen, wenn man ls mit dem Parameter „-a“ benutzt.
+Dateien und Verzeichnisse die mit „.“ beginnen sind versteckt. Man kann sie anzeigen, wenn man ls mit dem Parameter „-a“ benutzt.
 
 \section{Arbeiten im Textmodus}
 Unix stammt aus Zeiten, in denen man einen Rechner mit mehreren „Terminals“ bedient hat. 
@@ -76,7 +76,7 @@ yes & wiederholt die Eingabe
 
 \subsection{Befehlssyntax}
 Um einen Befehl richtig ausführen zu können benötigt dieser eine bestimmte Form. Ein typischer Unixbefehl könnte so aussehen:
-\lstinline$ls -lBh ~/$. ls ist der ausgeführte Befehl, -l, -B und -h sind Parameter für das Programm ls und \lstinline$~/$ der Pfad zum Verzeichnis, dessen Datein ls auflisten soll. \lstinline$~$ ist eine abgekürzte Schreibweise für das eigene home-Verzeichnis.i
+\lstinline$ls -lBh ~/$. ls ist der ausgeführte Befehl, -l, -B und -h sind Parameter für das Programm ls und \lstinline$~/$ der Pfad zum Verzeichnis, dessen Dateien ls auflisten soll. \lstinline$~$ ist eine abgekürzte Schreibweise für das eigene home-Verzeichnis.
 Genau so werden die Parameter und der richtige Aufruf von ls auch in der Manpage beschrieben. Mehrere Parameter können oftmals auch zusammengefasst werden, so dass \lstinline$ls -l -a ..$ die selbe Bedeutung hat wie \lstinline$ls -la ..$
 
 \subsection{Befehle verknüpfen}
@@ -84,7 +84,7 @@ In Unix können auch mehrere Befehle verknüpft werden. Dazu gibt es mehrere nü
 \begin{itemize}
 \item \lstinline$command &$ führt das Kommando im Hintergrund aus
 \item Mit \lstinline$command1 && command2$ kann man mehrere Kommandos hintereinander ausführen z.B. \lstinline$mkdir foo && ls -l && cd foo/$
-\item Mit \lstinline$command1 | command2$ kann man die Ausgabe von Kommando1 in Kommando2 verwenden  z.B. \lstinline$ls -l | grep foo$
+\item Mit \lstinline$command1 | command2$ kann man die Ausgabe von Kommando1 als Eingabe in Kommando2 verwenden  z.B. \lstinline$ls -l | grep foo$
 \end{itemize}
 
 Man kann mit diesen Verknüpfungen aber auch sehr viel Schabernack treiben, man sollte davon nicht mehr benutzen als man benötigt, da man so unnötige Fehler vermeiden kann.
@@ -113,7 +113,7 @@ Im Gegensatz zum Remotedesktop werden hier allerdings wesentlich weniger Daten �
 
 \begin{itemize}
 \item lade dir mit 'wget ...' das Dateiarchiv für die erste Aufgabe herunter, entpacke es mit 'tar -xf'.
-\item sieh nach wie spät es ist mit 'date' und rufe mit 'man date' die Manpage zu 'date' an
+\item sieh nach wie spät es ist mit 'date' und rufe mit 'man date' die Manpage zu 'date' auf
 \item lege in Europa einen Ordner 'Großbritanien' an und verschiebe 'york' hinein
 \item finde Atlantis und lösche es
 \item lege einen weiteren Ordner mit Städten für Australien an, lösche den Ordner wieder
