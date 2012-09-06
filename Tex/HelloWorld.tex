@@ -27,7 +27,7 @@ public class Hello {
 }
 \end{lstlisting}
 
-Die erste Zeile enthält unter anderem den Namen des Programms nämlich „Hello“. Die Datei mit dem Quelltext muss demzufolge „Hello.java“ heißen. \\
+Die erste Zeile enthält unter anderem den Namen des Programms nämlich „Hello“. Die Datei mit dem Quelltext muss demzufolge \lstinline$Hello.java$ heißen. \lstinline$public class$ bedeutet, dass wir eine nach außen sichtbare Klasse definieren. Warum man das so machen muss ist ersteinmal egal.\\
 \begin{lstlisting}
 public static void main(String args[]) {
 \end{lstlisting}
@@ -37,27 +37,28 @@ System.out.println("Hello World!");
 \end{lstlisting}
 Das ist der Befehl der „Hello World“ ausgibt. \lstinline$System.out.println$ ist der Befehl der Text ausgibt, „Hello World!“ der Text den wir ausgeben wollen. \\
 Die beiden schließenden (geschweiften) Klammern sind das Ende der Main-Funktion und das Ende des Programmes. 
-Wenn wir ein anderes Programm schreiben wollen, müssen wir lediglich die „\lstinline$System.out.println()$“-Zeile durch andere Befehle ersetzen.
+Wenn du ein anderes Programm schreiben willst, musst du lediglich die „\lstinline$System.out.println()$“-Zeile durch andere Befehle ersetzen.
 Damit bleiben allerdings noch einige Stellen des Programmcodes unerklärt: \lstinline$//$ leitet einen Einzeiligen Kommentar ein. Der Rest der Zeile, beginnend mit den beiden Schrägstrichen wird beim Übersetzen des Programmes ignoriert.
-Mehrzeilige Kommentare beginnen mit \lstinline$/*$ und enden mit \lstinline$*/$. Der Übersicht halber führt man oftmal die Reihe mit Sternen von unten bis oben fort.
+Mehrzeilige Kommentare beginnen mit \lstinline$/*$ und enden mit \lstinline$*/$. Der Übersicht halber führt man oftmals die Reihe mit Sternen von unten bis oben fort.
 
 
 \subsection{Das Programm ausführen}
-Um das Programm auszuführen, müssen wir zuerst den Quelltext des Programms in Bytecode umwandeln lassen und dann die Java-Virtual-Maschine aufrufen, die den Bytecode aufsführt. 
+Um das Programm auszuführen, musst du zuerst den Quelltext des Programms in Bytecode umwandeln lassen und dann die Java-Virtual-Maschine aufrufen, die den Bytecode aufsführt. 
 Für das Übersetzen des Quelltextes in Bytecode ist der Java-Compiler zuständig
 Unter UNIX ruft man den Java-Compiler aus dem Terminal mit „javac Hello.java“ auf. Der Compiler hat nun, sofern das Programm keine Fehler enthält eine Datei mit dem Namen „Hello.class“ erzeugt (oder eine ältere Version überschrieben) – diese Datei enthält den Bytecode.
-Die JVM kann man mit dem Befehl „java“ aufrufen. „java Hello“ führt den Bytecode in Hello.class aus.
+Die JVM kannst du mit dem Befehl „java“ aufrufen. „java Hello“ führt den Bytecode in Hello.class aus.
 
 \section {Aufgaben}
-\begin{itemize}
+\begin{enumerate}
 \item Sieh dir den Quelltext in Hello.java an
 \item Kompiliere das Programm und führe es aus
 \item Ändere den ausgegebenen Text
 \item Ändere den Namen des Programms
-\end{itemize}
+\item Führe das geänderte Progamm aus
+\end{enumerate}
 
 Normalerweise bearbeitet man Quelltext nicht in einem einfachen Texteditor sondern einer weit praktischeren Entwicklungsumgebung.
-Für Java bietet sich als Entwicklungsumgebung das Programm „eclipse“ an.
+Für Java bietet sich als Entwicklungsumgebung das Programm \lstinline$eclipse$ an.
 \begin{itemize}
 \item Starte Eclipse und erstelle ein neues Projekt für das Hello-World-Programm.
 \item Füge eine Quelltextdatei mit dem Hello-World-Programm zum Projekt hinzu und führe es aus.
