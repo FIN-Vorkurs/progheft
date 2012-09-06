@@ -1,12 +1,12 @@
 \chapter{UNIX}
 
 \lstset{language=bash}
-Viele der Grundprinzipien von UNIX sind in heutigen Betriebssystemen noch vorhanden und mit einigen dieser Betriebssysteme werdet ihr im laufe eures Studiums noch zu tun haben.
+Viele der Grundprinzipien von UNIX sind in heutigen Betriebssystemen noch vorhanden und mit einigen dieser Betriebssysteme wirst du im laufe eures Studiums noch zu tun haben.
 
 \section{Verzeichnisstruktur}
 In Unix wird alles, egal ob es sich um eine Netzwerkschnittstelle, die Festplatte oder eine Musikdatei handelt als Datei repräsentiert. Alle diese Dateien lassen sich im sogenannten „Verzeichnissbaum“ des Betriebssystems finden. Das wohl wichtigste Verzeichnis in UNIX ist \lstinline$/$ – das Wurzelverzeichnis. In diesem Verzeichnis liegen alle anderen Verzeichnisse.
 
-An dieser Stelle lernen wir die ersten beiden Kommandos für das Terminal kennen: \lstinline$ls$ und \lstinline$cd$.
+An dieser Stelle lernst du die ersten beiden Kommandos für das Terminal kennen: \lstinline$ls$ und \lstinline$cd$.
 Sie sind die wichtigsten Kommandos für die Navigation durch den Verzeichnissbaum von Unix. \lstinline$cd$ steht für „change directory“ und lässt uns das Verzeichnis wechseln. Gibt man also \lstinline$cd /$ ins Terminal ein, so wechselt man ins Wurzelverzeichnis. \lstinline$ls$ steht für „list search“, es liefert eine Auflistung der Dateien im aktuellen Ordner.
 Da in Unix alles eine Datei ist, sieht man auch die Unterverzeichnisse des aktuellen Verzeichnisses.
 Die Verzeichnisse im Wurzelverzeichnis sind bei den meisten Betriebssystemen (fast) gleich und jedes dieser Verzeichnisse erfüllt die selbe Bedeutung.
@@ -28,7 +28,7 @@ Verzeichnis & Bedeutung \\ \hline
 \lstinline$/sbin$ & das „bin“ für Programme die nur root ausführen darf \\
 \lstinline$/tmp$ & Temporäre Dateien \\
 \lstinline$/usr$ & „unix system resources“ Dateien die für alle Nutzer relevant sind \\
-\lstinline$/var$ & Variabler Inhalt, in /var/log verstecken sich diverse Log-Files
+\lstinline$/var$ & Variabler Inhalt, in \lstinline$/var/log$ verstecken sich diverse Log-Files
 \end{tabular}
 \label{UNIX-Verzeichnisse}
 \end{table}
@@ -63,7 +63,7 @@ Befehl & Bedeutung \\ \hline
 \lstinline$mkdir$ & legt ein Verzeichnis an \\
 \lstinline$mv$ & verschiebt eine Datei \\
 \lstinline$passwd$ & eigenes Passwort ändern \\
-\lstinline$pwd$ & Zeigt das Verzeichnis an \\
+\lstinline$pwd$ & Zeigt das Verzeichnis mit komplettem Pfad an \\
 \lstinline$rm$ & Datei löschen \\
 \lstinline$ssh$ & eine Shell auf einem anderen Rechner öffnen \\
 \lstinline$tar$ & Dateiarchive packen und entpacken \\
