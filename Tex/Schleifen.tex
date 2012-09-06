@@ -183,13 +183,13 @@ public class IfThenElse {
 \end{lstlisting}	
 \end{minipage}
 
-In der ersten Zeile wird der Container definiert: Es wird Platz für 365 \textit{double}-Werte reserviert und jeder der Werte wird mit einem Standardwert, in diesem Fall $0.0$, initialisiert. In der zweiten Zeile befülle ich den 42. Platz des Containers mit einem Wert: $13.37$, der in der dritten Zeile wieder ausgegeben wird. Die Ausgabe in der vierten Zeile wird $0.0$ ausgeben, da kein anderer Wert diesem Container zugewiesen wurde.
+In der ersten Zeile wird der Container deklariert: Es wird Platz für 365 \textit{double}-Werte reserviert und jeder der Werte wird mit einem Standardwert, in diesem Fall $0.0$, initialisiert. In der zweiten Zeile befülle ich den 42. Platz des Containers mit einem Wert: $13.37$, der in der dritten Zeile wieder ausgegeben wird. Die Ausgabe in der vierten Zeile wird $0.0$ ausgeben, da kein anderer Wert diesem Container zugewiesen wurde.
 
 \begin{itemize}
 	\item[\textit{Bemerkung:}] Die Initialisierung mit einem Standardwert ist eine Eigenheit von Java. Viele andere Programmiersprachen, zum Beispiel C++, würden an dieser Stelle einen (mehr oder weniger) zufälligen Wert zurückgeben.
 \end{itemize}
 
-Ähnlich wie das Schachteln von Schleifen, können auch Arrays ''geschachtelt'' werden. Wenn man sich ein eindimensionales Array als Reihe eines Schachbretts vorstellt, dann ist das komplette Brett ein zweidimensionales Array. Ein dreidimensionales Array kann man sich als viele Schachbretter übereinander vorstellen. Die Vorstellung von Dimensionen größer als drei überlasse ich an der Stelle lieber den Mathematikern. Die Definition eines mehrdimensionalen Arrays kann wie folgt aussehen:
+Ähnlich wie das Schachteln von Schleifen, können auch Arrays ''geschachtelt'' werden. Wenn man sich ein eindimensionales Array als Reihe eines Schachbretts vorstellt, dann ist das komplette Brett ein zweidimensionales Array. Ein dreidimensionales Array kann man sich als viele Schachbretter übereinander vorstellen. Die Vorstellung von Dimensionen größer als drei überlasse ich an der Stelle lieber den Mathematikern. Die Deklaration eines mehrdimensionalen Arrays kann wie folgt aussehen:
 
 \begin{minipage}{\textwidth}
 \begin{lstlisting}
@@ -224,8 +224,10 @@ Insbesondere beim Einlesen der Größe des Arrays, wenn man also die Größe des
 \subsection{Aufgaben}
 
 \begin{enumerate}
-	\item Schreib ein Programm, dass für ein Array von Integern oder Floats die Summe aller ihrer Elemente ausgibt.
+	\item Schreib ein Programm, das für ein Array von Integern oder Floats die Summe aller ihrer Elemente ausgibt.
 	\item Schreib ein Programm, welches zwei gleich große Arrays von Integern oder Floats entgegennimmt und die Elementweise Summe in ein neues Array schreibt.
-	\item Schreib ein Programm, welches die Größe eines zu erstellenden Arrays vom Nutzer einliest. Fülle dieses Array der Größe $n$ mit den ersten $n$ Primzahlen
+	\item Schreib ein Programm, welches die Größe eines zu erstellenden Arrays vom Nutzer einliest. Fülle dieses Array der Größe $n$ mit den ersten $n$ Primzahlen.
+	\item Spieglein, Spieglein in meinem Programm, spiegle ein Zweidimensionales Array. (Es sollen sich also die Werte an anderen Stellen wiederfinden.
+	\item Schreib ein Programm, in dem zu jeder Person mehrere schlechte Wortwitze abgespeichert werden können. Was wäre eine Wortspielkasse, ohne ein tolles Javaprogamm?
 \end{enumerate}
 
