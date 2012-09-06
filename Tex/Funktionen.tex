@@ -144,23 +144,23 @@ Wie du siehst, wird die Fakultät benutzt um die Fakultät zu definieren. Die Re
 public class Rekursion{
   public static void main(String[] args){
     long number = 12;
-    long result = faculty(number);
+    long result = factorial(number);
     System.out.println(result);
   }
   
-  public static long faculty(long number){
+  public static long factorial(long number){
     //Abbruchbedingung
     if(number <= 1){
       return 1;
     }
     //rekursiver Aufruf
-    return number*faculty(number-1);
+    return number*factorial(number-1);
   }
 }
 \end{lstlisting}
 \end{minipage}
 
-In der Funktion \textit{faculty} findet ihr beide Elemente, die jede Rekursion enthalten muss. Zum Einen die Abbruchbedingung bei der geprüft wird, ob die Zahl kleiner als 2 ist. Wenn das so ist wird eine Konstante zurückgegeben. Zum Anderen findet ihr den rekursiven Aufruf, bei dem in der \textit{return}-Zeile wieder die Funktion aufgerufen wird.
+In der Funktion \textit{factorial} findet ihr beide Elemente, die jede Rekursion enthalten muss. Zum Einen die Abbruchbedingung bei der geprüft wird, ob die Zahl kleiner als 2 ist. Wenn das so ist wird eine Konstante zurückgegeben. Zum Anderen findet ihr den rekursiven Aufruf, bei dem in der \textit{return}-Zeile wieder die Funktion aufgerufen wird.
 
 \section{Aufgaben}
 
