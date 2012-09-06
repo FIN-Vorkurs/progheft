@@ -3,7 +3,7 @@ Computerprogramme weisen im Wesentlichen drei relativ unabhängige Komponenten a
 Die einfachste Form der Eingabe kennen wir auch schon: Wir setzen Werte im Quelltext. Ein Beispiel dafür ist unser „Hello World“-Proramm, indem wir festlegen das genau „Hello World“ und nicht „foobar“ ausgeben werden soll.
 
 Um komplexere Eingaben, Verarbeitung und die Ausgabe dieser veränderlichen Daten zu ermöglichen brauchen wir eine Möglichkeit Daten abzuspeichern und zu bearbeiten, die vor dem Programmaufruf noch nicht bekannt sind.
-Genau dies erlaubt das Konzept der Variablen. Eine Variable ist ein Platzhalter für einen dieser unbekannten Werte. \\ \\
+Genau dies erlaubt das Konzept der Variablen. Jede Variable ist ein Platzhalter für einen dieser unbekannten Werte. \\ \\
 Ersetzen wir im „Hello World“-Programm die Zeile
 \begin{lstlisting}
 System.out.println("Hello World");
@@ -25,9 +25,9 @@ Die Deklaration einer Variablen, eine Wertzuweisung und ein Funktionsaufruf. Das
 \subsection {Deklaration und Definition}
 Um mit Variablen arbeiten zu können braucht man zwei Schritte: Deklaration und Definition.
 
-„Sei p eine Primzahl” entspricht in etwa dem, was man dem Compiler bei der Deklaration einer Variable sagt. Um Werte digital abspeichern zu können muss man Wissen, um was für Daten es sich handelt. Eine Zahl muss anders abgespeichtert werden, als zum Beispiel eine Zeichenkette wie „Hello World“.
+„Sei p eine Primzahl” entspricht in etwa dem, was man dem Compiler bei der Deklaration einer Variable sagt. Um Werte digital abspeichern zu können muss man wissen, um was für Daten es sich handelt. Eine Zahl muss anders abgespeichtert werden, als eine Zeichenkette wie „Hello World“.
 
-Glücklicherweise müssen wir als Programmierer uns keine Gedanken mehr darum machen, wie die Daten intern repräsentiert werden.
+Glücklicherweise du dir als Programmierer kaum noch Gedanken darum machen, wie die Daten intern repräsentiert werden.
 Um auszudrücken um was für Daten es sich handelt gibt es sogenannte Datentypen. Eine kleine Auswahl der verfügbaren Typen findest du in der Tabelle \ref{Datentypen}. \\
 
 \begin{table}
@@ -72,21 +72,21 @@ Deklaration und Definition können auch in einer Anweisung gemacht werden:
 \begin{lstlisting}
 String text = "Hello World";
 \end{lstlisting}
-Beachtet, das der Datentyp von Rechter und Linker Seite der Zuweisung übereinstimmen müssen. Es kann allerdings auch sein, dass ihr das gar nicht wollt.
-Um den Typ einer Variablen zu ändern gibt es sogenannte Casts. Integrale Datentypen wie int oder char könnt ihr ineinander umwandeln, indem ihr den eingeklammerten Namen des Zieldatentyps vor die Variable schreibt: 
+Beachtet, das der Datentyp von rechter- und linker Seite der Zuweisung übereinstimmen müssen. Es kann allerdings auch sein, dass ihr das gar nicht wollt.
+Um den Typ einer Variablen zu ändern gibt es sogenannte Casts. Integrale Datentypen wie \lstinline$int$ oder \lstinline$char$ könnt ihr ineinander umwandeln, indem ihr den eingeklammerten Namen des Zieldatentyps vor die Variable schreibt: 
 \begin{lstlisting}
 char c = (char) intvariable;
 \end{lstlisting}
 Das \lstinline$(char)$ sorgt dann dafür, dass aus der Ganzzahl ein Buchstabe gemacht wird.
-Für andere Typänderungen gibt es Funktionen.
+Für komplexere Typänderungen gibt es Funktionen. Manchmal musst du diese Funktionen auch selbst schreiben. Ein schwieriges Beispiel für so eine Typumwandlung wäre: Mach aus einer Zahl das zugehörige Zahlwort.
 
 \subsection{Funktionsaufrufe}
 Funktionen sind vorgefertigte Unterprogramme, die einen bestimmten Zweck erfüllen. Eine Funktion kennt ihr schon: \lstinline$System.out.println()$.
-Diese Funktion tut etwas, und gibt dann die Kontrolle wieder an den nächsten Befehl ab. Es gibt aber auch Funktionen, die einen Wert berechnen.
+Diese Funktion tut etwas und gibt dann die Kontrolle wieder an den nächsten Befehl ab. Es gibt aber auch Funktionen, die einen Wert berechnen.
 
 Diesen Wert nennt man Rückgabewert. Die Funktion \lstinline$Math.random()$ hat als Rückgabewert einen zufälligen Wert.
 
-Wie packt man nun Funktionen in einen Befehl? Interessiert uns der Rückgabewert der Funktion, so benutzen wir die Funktion in einer Zuweisung: 
+Wie packt man nun Funktionen in einen Befehl? Interessiert uns der Rückgabewert der Funktion, so benutzen wir die Funktion in der rechten Seite einer Zuweisung: 
 \begin{lstlisting}
 zufallszahl = Math.random();
 \end{lstlisting}
@@ -118,8 +118,10 @@ import java.util.Scanner; // Paket fuer den Scanner
 
 public class Hello {
 	public static void main(String args[]) {
-		Scanner scanner;	// Beachtet den unterschied zwischen Datentyp('S') und Variable('s')!
-		scanner = new Scanner(System.in); // Legt einen Scanner an, der System.in ueberwacht
+		Scanner scanner;	
+		// Variable: klein-s, Typ: GROSS-S.
+		scanner = new Scanner(System.in); 
+		// Legt einen Scanner an, der System.in ueberwacht
 		String name = scanner.next();
 		System.out.println("Hello " + name + "!");
 	}
@@ -129,9 +131,9 @@ Damit ist unser „Hello World“-Programm, schon richtig gut, denn es kann nun 
 
 \section {Aufgaben}
 \begin{enumerate}
-\item Füge eine neue Textausgabe ein, die den Nutzer auffordert seinen Namen einzugeben, sonst weiß er nicht, dass er etwas eingeben soll.
-\item Schreibe ein Java Programm, dass den Ape-Faktor einer Person ausgibt, nachdem man Größe und Armspanne eingegeben hat. (Der Ape-Faktor ist die Differenz zwischen Größe und Armspanne einer Person)
-\item Schreibe ein Programm, dass den ASCII-Code eines eingegeben Buchstaben ausgibt.
+\item Füge eine neue Textausgabe ein, die den Nutzer auffordert seinen Namen einzugeben, lass das Programm antworten mit „Hello \textit{Name}“.
+\item Schreibe ein Java Programm, das den Ape-Faktor einer Person ausgibt, nachdem man Größe und Armspanne eingegeben hat. (Der Ape-Faktor ist die Differenz zwischen Größe und Armspanne einer Person)
+\item Schreibe ein Programm, das den ASCII-Code eines eingegeben Buchstaben ausgibt.
 \end{enumerate}
 
-Zusatz: Schreibe ein Programm, dass einen Buchstaben mit der Caesar-Verschlüsselung (mit Variabler Verschiebeweite) verschlüsseln kann.
+Zusatz: Schreibe ein Programm, das einen Buchstaben mit der Caesar-Verschlüsselung (mit Variabler Verschiebeweite) verschlüsselt.
